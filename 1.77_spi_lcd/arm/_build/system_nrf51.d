@@ -1,0 +1,9 @@
+.\_build\system_nrf51.o: system_nrf51.c
+.\_build\system_nrf51.o: C:\Keil-ARM\ARM\RV31\INC\stdint.h
+.\_build\system_nrf51.o: .\include\nrf.h
+.\_build\system_nrf51.o: .\include\compiler_abstraction.h
+.\_build\system_nrf51.o: .\include\nrf51.h
+.\_build\system_nrf51.o: C:\Keil-ARM\ARM\RV31\INC\core_cm0.h
+.\_build\system_nrf51.o: .\include\system_nrf51.h
+.\_build\system_nrf51.o: .\include\nrf51_bitfields.h
+.\_build\system_nrf51.o: .\include\nrf51_deprecated.h

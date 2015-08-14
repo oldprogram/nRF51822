@@ -1,0 +1,5 @@
+-c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\..\..\..\Include -I.\include --c99
+-I D:\keill\ARM\RV31\INC
+-I D:\keill\ARM\PACK\ARM\CMSIS\3.20.3\CMSIS\Include
+-I D:\keill\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.0.1\Device\Include
+-DNRF51 -DNRF51 -DSETUPA -DBOARD_PCA10001 -o .\_build\system_nrf51.o --omf_browse .\_build\system_nrf51.crf --depend .\_build\system_nrf51.d --feedback ".\_build\blinky_arm.fed" "system_nrf51.c"

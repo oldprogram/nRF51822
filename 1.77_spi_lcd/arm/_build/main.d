@@ -1,0 +1,16 @@
+.\_build\main.o: main.c
+.\_build\main.o: C:\Keil-ARM\ARM\RV31\INC\stdbool.h
+.\_build\main.o: C:\Keil-ARM\ARM\RV31\INC\stdint.h
+.\_build\main.o: .\include\nrf_delay.h
+.\_build\main.o: .\include\nrf.h
+.\_build\main.o: .\include\compiler_abstraction.h
+.\_build\main.o: .\include\nrf51.h
+.\_build\main.o: C:\Keil-ARM\ARM\RV31\INC\core_cm0.h
+.\_build\main.o: .\include\system_nrf51.h
+.\_build\main.o: .\include\nrf51_bitfields.h
+.\_build\main.o: .\include\nrf51_deprecated.h
+.\_build\main.o: .\include\nrf_gpio.h
+.\_build\main.o: .\include\boards.h
+.\_build\main.o: .\include\pca10001.h
+.\_build\main.o: nrf_lcd.h
+.\_build\main.o: font.h

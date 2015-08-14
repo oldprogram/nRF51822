@@ -1,0 +1,14 @@
+.\_build\nrf_lcd.o: nrf_lcd.c
+.\_build\nrf_lcd.o: nrf_lcd.h
+.\_build\nrf_lcd.o: .\include\pca10001.h
+.\_build\nrf_lcd.o: .\include\nrf_gpio.h
+.\_build\nrf_lcd.o: .\include\nrf51.h
+.\_build\nrf_lcd.o: C:\Keil-ARM\ARM\RV31\INC\core_cm0.h
+.\_build\nrf_lcd.o: C:\Keil-ARM\ARM\RV31\INC\stdint.h
+.\_build\nrf_lcd.o: .\include\system_nrf51.h
+.\_build\nrf_lcd.o: .\include\nrf51_bitfields.h
+.\_build\nrf_lcd.o: .\include\nrf_delay.h
+.\_build\nrf_lcd.o: .\include\nrf.h
+.\_build\nrf_lcd.o: .\include\compiler_abstraction.h
+.\_build\nrf_lcd.o: .\include\nrf51_deprecated.h
+.\_build\nrf_lcd.o: font.h
