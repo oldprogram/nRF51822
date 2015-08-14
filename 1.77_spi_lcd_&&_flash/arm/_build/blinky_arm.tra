@@ -2,13 +2,18 @@
 ### Preparing for ADS-LD.
 ### Creating ADS-LD Command Line
 ### List of Objects: adding '".\_build\main.o"'
+### List of Objects: adding '".\_build\nrf_lcd.o"'
+### List of Objects: adding '".\_build\draw_base.o"'
+### List of Objects: adding '".\_build\draw_picture.o"'
+### List of Objects: adding '".\_build\draw_text.o"'
+### List of Objects: adding '".\_build\nrf_delay.o"'
+### List of Objects: adding '".\_build\flash.o"'
 ### List of Objects: adding '".\_build\system_nrf51.o"'
 ### List of Objects: adding '".\_build\arm_startup_nrf51.o"'
-### List of Objects: adding '".\_build\nrf_delay.o"'
-### List of Objects: adding '".\_build\nrf_lcd.o"'
 ### List of Objects: adding '".\_build\font.o"'
+### List of Objects: adding '".\_build\pic.o"'
 ### ADS-LD Command completed:
---cpu Cortex-M0 ".\_build\main.o" ".\_build\system_nrf51.o" ".\_build\arm_startup_nrf51.o" ".\_build\nrf_delay.o" ".\_build\nrf_lcd.o" ".\_build\font.o" --library_type=microlib --feedback ".\_build\blinky_arm.fed" 
+--cpu Cortex-M0 ".\_build\main.o" ".\_build\nrf_lcd.o" ".\_build\draw_base.o" ".\_build\draw_picture.o" ".\_build\draw_text.o" ".\_build\nrf_delay.o" ".\_build\flash.o" ".\_build\system_nrf51.o" ".\_build\arm_startup_nrf51.o" ".\_build\font.o" ".\_build\pic.o" --library_type=microlib --feedback ".\_build\blinky_arm.fed" 
 --strict --scatter ".\_build\blinky_arm.sct" 
 --autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
 --info sizes --info totals --info unused --info veneers 
@@ -16,7 +21,7 @@
 ### ADS-LD Output File: '.\_build\blinky_arm.axf'
 ### ADS-LD Command File: '.\_build\blinky_arm.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile '.\_build\blinky_arm.lnp', Handle=0x000008E0
+### Creating CmdFile '.\_build\blinky_arm.lnp', Handle=0x00000958
 ### Writing '.lnp' file
 ### ADS-LD Command file '.\_build\blinky_arm.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

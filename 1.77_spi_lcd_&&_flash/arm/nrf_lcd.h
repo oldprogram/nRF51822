@@ -28,8 +28,7 @@
 
 
 //------------------------------------------------------
-#define PIC_WIDTH    160	 //预备向LCD显示区域填充的图片的大小
-#define PIC_HEIGHT   160
+
 
 #define ROW  160		    //显示的行、列数
 #define COL  128
@@ -46,13 +45,12 @@
 #define GRAY25 0xADB5
 
 
-void GPIO_Init(void);
-void LCD_Init(void);
-void Disp(unsigned short int width, unsigned short int height, unsigned short int *p);
-void DispColor(unsigned int color);
-void DispInt(unsigned int i, unsigned int Xstart, unsigned int Ystart, unsigned int TextColor, unsigned int BackColor);
-void DispStr(unsigned char *str, unsigned int Xstart, unsigned int Ystart, unsigned int TextColor, unsigned int BackColor);
-//void DrawLine(unsigned int Xstart, unsigned int Xend, unsigned int Ystart, unsigned int Yend, unsigned int color);
-void DrawBand(unsigned int Xstart, unsigned int Xend, unsigned int Ystart, unsigned int Yend, unsigned int color);
-void edge_dispband(uint16_t sensor_state);
+void GPIO_Init(void);//SPI的GPIO初始化
+void LCD_Init(void);//LCD初始化
+void WriteDispData(unsigned char DataH, unsigned char DataL);//写显示数据向屏幕（屏幕显示数据需要2字节）
+void BlockWrite(unsigned int Xstart, unsigned int Xend, unsigned int Ystart, unsigned int Yend);//LCD块写（大量数据修改，相当于擦除，这句话之后调用SPI向屏幕写数据就从对应的矩形区域开始填充）
+void DispColor(unsigned int color);//LCD显示颜色（颜色已在.h文件中定义）
+void WriteOneDot(unsigned int color);//写一个点（带颜色）
+void PutPixel(unsigned int x, unsigned int y, unsigned int color);//绘制一个像素点
+
 #endif

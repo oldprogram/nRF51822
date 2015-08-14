@@ -1,27 +1,3 @@
-/* Copyright (c) 2009 Nordic Semiconductor. All Rights Reserved.
- *
- * The information contained herein is property of Nordic Semiconductor ASA.
- * Terms and conditions of usage are described in detail in NORDIC
- * SEMICONDUCTOR STANDARD SOFTWARE LICENSE AGREEMENT.
- *
- * Licensees are granted free, non-transferable use of the information. NO
- * WARRANTY of ANY KIND is provided. This heading must NOT be removed from
- * the file.
- *
- */
-
-/** @file
-* @brief Example project on GPIO usage to drive LEDs
-* @defgroup gpio_example_pca10001 GPIO example
-* @{
-* @ingroup nrf_examples_pca10001
-*
-* @brief Example of GPIO output usage.
-*
-* This example shows how to configure GPIO pins as outputs which can also be used to drive LEDs.
-* Each LED is set on one at a time and each state lasts 100 milliseconds.
-*/
-
 #include <stdbool.h>
 #include <stdint.h>
 #include "nrf_delay.h"
@@ -29,7 +5,9 @@
 #include "boards.h"
 #include "nrf_lcd.h"
 #include "flash.h"
-#include "nrf_lcd.h"
+#include "draw_base.h"
+#include "draw_picture.h"
+#include "draw_text.h"
 
 
 #if defined(FLASH_TEST)

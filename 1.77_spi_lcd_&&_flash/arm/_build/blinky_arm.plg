@@ -3,25 +3,11 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-C:\Users\LiTao\Desktop\OLED≤‚ ‘≥Ã–Ú2\OLED_example\OLED_example\arm\blinky.uvproj
+I:\GitHub\nRF51822\1.77_spi_lcd_&&_flash\arm\blinky.uvproj
 Project File Date:  08/14/2015
 
 <h2>Output:</h2>
 Build target 'nRF51822'
-creating preprocessor file for main.c...
-compiling main.c...
-main.c(53): warning:  #223-D: function "DrawLine" declared implicitly
-main.c:                         DrawLine(myDis.cen_x,myDis.cen_x,myDis.cen_y-myDis.len,myDis.cen_y,isPre==0 ? GREEN : RED);
-main.c:                         ^
-main.c(66): warning:  #223-D: function "DrawLine" declared implicitly
-main.c:                 if(isPre==0)DrawLine(myDis.cen_x-2,myDis.cen_x+2,myDis.cen_y-2,myDis.cen_y+2,BLACK);
-main.c:                             ^
-main.c: main.c: 2 warnings, 0 errors
-creating preprocessor file for system_nrf51.c...
-compiling system_nrf51.c...
-creating preprocessor file for nrf_delay.c...
-compiling nrf_delay.c...
-creating preprocessor file for nrf_lcd.c...
 compiling nrf_lcd.c...
 nrf_lcd.c(2): error:  #29: expected an expression
 nrf_lcd.c:   unsigned short int  PIC[ROW][COL] =        {};
@@ -39,8 +25,572 @@ nrf_lcd.c(214): warning:  #177-D: variable "k" was declared but never referenced
 nrf_lcd.c:      unsigned int  n,k; //n-row repeat count,k-col repeat count
 nrf_lcd.c:                      ^
 nrf_lcd.c: nrf_lcd.c: 2 warnings, 3 errors
+Target not created
+Build target 'nRF51822'
+creating preprocessor file for nrf_lcd.c...
+compiling nrf_lcd.c...
+nrf_lcd.c(221): error:  #20: identifier "LCD_CS" is undefined
+nrf_lcd.c:      nrf_gpio_pin_clear(LCD_CS);
+nrf_lcd.c:                         ^
+nrf_lcd.c(222): error:  #20: identifier "LCD_DC" is undefined
+nrf_lcd.c:     nrf_gpio_pin_set(LCD_DC);//DC(RS) low means send cmd
+nrf_lcd.c:                      ^
+nrf_lcd.c(214): warning:  #177-D: variable "n" was declared but never referenced
+nrf_lcd.c:      unsigned int  n,k; //n-row repeat count,k-col repeat count
+nrf_lcd.c:                    ^
+nrf_lcd.c(214): warning:  #177-D: variable "k" was declared but never referenced
+nrf_lcd.c:      unsigned int  n,k; //n-row repeat count,k-col repeat count
+nrf_lcd.c:                      ^
+nrf_lcd.c: nrf_lcd.c: 2 warnings, 2 errors
+Target not created
+Build target 'nRF51822'
+creating preprocessor file for nrf_lcd.c...
+compiling nrf_lcd.c...
+creating preprocessor file for pic.c...
+pic.c(3212): warning:  #1-D: last line of file ends without a newline
+pic.c:   #endif
+pic.c:         ^
+pic.c: pic.c: 1 warning, 0 errors
+compiling pic.c...
+pic.c(6): error:  #65: expected a ";"
+pic.c:   unsigned  int code pic_eval[] =
+pic.c:                      ^
+pic.c(3211): warning:  #12-D: parsing restarts here after previous syntax error
+pic.c:   };
+pic.c:    ^
+pic.c(3212): warning:  #1-D: last line of file ends without a newline
+pic.c:   #endif
+pic.c:         ^
+pic.c: pic.c: 2 warnings, 1 error
+Target not created
+Build target 'nRF51822'
+compiling pic.c...
+pic.c(6): error:  #65: expected a ";"
+pic.c:   unsigned  int code pic_eval[] =
+pic.c:                      ^
+pic.c(3211): warning:  #12-D: parsing restarts here after previous syntax error
+pic.c:   };
+pic.c:    ^
+pic.c(3212): warning:  #1-D: last line of file ends without a newline
+pic.c:   #endif
+pic.c:         ^
+pic.c: pic.c: 2 warnings, 1 error
+Target not created
+Build target 'nRF51822'
+creating preprocessor file for pic.c...
+pic.c(3212): warning:  #1-D: last line of file ends without a newline
+pic.c:   #endif
+pic.c:         ^
+pic.c: pic.c: 1 warning, 0 errors
+compiling pic.c...
+pic.c(3212): warning:  #1-D: last line of file ends without a newline
+pic.c:   #endif
+pic.c:         ^
+pic.c: pic.c: 1 warning, 0 errors
+linking...
+Program Size: Code=2616 RO-data=208 RW-data=4032 ZI-data=2088  
+FromELF: creating hex file...
+".\_build\blinky_arm.axf" - 0 Error(s), 1 Warning(s).
+Build target 'nRF51822'
+creating preprocessor file for pic.c...
+compiling pic.c...
+linking...
+Program Size: Code=2616 RO-data=208 RW-data=4032 ZI-data=2088  
+FromELF: creating hex file...
+".\_build\blinky_arm.axf" - 0 Error(s), 0 Warning(s).
+Build target 'nRF51822'
+creating preprocessor file for main.c...
+compiling main.c...
+main.c(53): warning:  #223-D: function "DrawLine" declared implicitly
+main.c:                         DrawLine(myDis.cen_x,myDis.cen_x,myDis.cen_y-myDis.len,myDis.cen_y,isPre==0 ? GREEN : RED);
+main.c:                         ^
+main.c(66): warning:  #223-D: function "DrawLine" declared implicitly
+main.c:                 if(isPre==0)DrawLine(myDis.cen_x-2,myDis.cen_x+2,myDis.cen_y-2,myDis.cen_y+2,BLACK);
+main.c:                             ^
+main.c: main.c: 2 warnings, 0 errors
+creating preprocessor file for system_nrf51.c...
+compiling system_nrf51.c...
+assembling arm_startup_nrf51.s...
+creating preprocessor file for nrf_delay.c...
+compiling nrf_delay.c...
+creating preprocessor file for nrf_lcd.c...
+compiling nrf_lcd.c...
+creating preprocessor file for flash.c...
+compiling flash.c...
+flash.c(357): warning:  #177-D: variable "valueTemp" was declared but never referenced
+flash.c:     uint16_t valueTemp = 0;
+flash.c:              ^
+flash.c(501): warning:  #177-D: variable "count" was declared but never referenced
+flash.c:        uint8_t count=5;
+flash.c:                ^
+flash.c(101): warning:  #177-D: function "SpiFlash_ReadSR" was declared but never referenced
+flash.c:   static uint8_t SpiFlash_ReadSR(void)
+flash.c:                  ^
+flash.c: flash.c: 3 warnings, 0 errors
 creating preprocessor file for font.c...
 compiling font.c...
+creating preprocessor file for pic.c...
+compiling pic.c...
+linking...
+Program Size: Code=2616 RO-data=208 RW-data=4032 ZI-data=2088  
+FromELF: creating hex file...
+".\_build\blinky_arm.axf" - 0 Error(s), 5 Warning(s).
+Build target 'nRF51822'
+linking...
+Program Size: Code=2616 RO-data=208 RW-data=4032 ZI-data=2088  
+FromELF: creating hex file...
+".\_build\blinky_arm.axf" - 0 Error(s), 0 Warning(s).
+Build target 'nRF51822'
+creating preprocessor file for main.c...
+compiling main.c...
+main.c(53): warning:  #223-D: function "DrawLine" declared implicitly
+main.c:                         DrawLine(myDis.cen_x,myDis.cen_x,myDis.cen_y-myDis.len,myDis.cen_y,isPre==0 ? GREEN : RED);
+main.c:                         ^
+main.c(66): warning:  #223-D: function "DrawLine" declared implicitly
+main.c:                 if(isPre==0)DrawLine(myDis.cen_x-2,myDis.cen_x+2,myDis.cen_y-2,myDis.cen_y+2,BLACK);
+main.c:                             ^
+main.c: main.c: 2 warnings, 0 errors
+creating preprocessor file for system_nrf51.c...
+compiling system_nrf51.c...
+assembling arm_startup_nrf51.s...
+creating preprocessor file for nrf_delay.c...
+compiling nrf_delay.c...
+creating preprocessor file for flash.c...
+compiling flash.c...
+flash.c(357): warning:  #177-D: variable "valueTemp" was declared but never referenced
+flash.c:     uint16_t valueTemp = 0;
+flash.c:              ^
+flash.c(501): warning:  #177-D: variable "count" was declared but never referenced
+flash.c:        uint8_t count=5;
+flash.c:                ^
+flash.c(101): warning:  #177-D: function "SpiFlash_ReadSR" was declared but never referenced
+flash.c:   static uint8_t SpiFlash_ReadSR(void)
+flash.c:                  ^
+flash.c: flash.c: 3 warnings, 0 errors
+creating preprocessor file for nrf_lcd.c...
+compiling nrf_lcd.c...
+creating preprocessor file for font.c...
+compiling font.c...
+creating preprocessor file for pic.c...
+compiling pic.c...
+linking...
+Program Size: Code=2616 RO-data=208 RW-data=4032 ZI-data=2088  
+FromELF: creating hex file...
+".\_build\blinky_arm.axf" - 0 Error(s), 5 Warning(s).
+Build target 'nRF51822'
+creating preprocessor file for main.c...
+compiling main.c...
+main.c(53): warning:  #223-D: function "DrawLine" declared implicitly
+main.c:                         DrawLine(myDis.cen_x,myDis.cen_x,myDis.cen_y-myDis.len,myDis.cen_y,isPre==0 ? GREEN : RED);
+main.c:                         ^
+main.c(66): warning:  #223-D: function "DrawLine" declared implicitly
+main.c:                 if(isPre==0)DrawLine(myDis.cen_x-2,myDis.cen_x+2,myDis.cen_y-2,myDis.cen_y+2,BLACK);
+main.c:                             ^
+main.c: main.c: 2 warnings, 0 errors
+creating preprocessor file for system_nrf51.c...
+compiling system_nrf51.c...
+assembling arm_startup_nrf51.s...
+creating preprocessor file for nrf_delay.c...
+compiling nrf_delay.c...
+creating preprocessor file for flash.c...
+compiling flash.c...
+flash.c(357): warning:  #177-D: variable "valueTemp" was declared but never referenced
+flash.c:     uint16_t valueTemp = 0;
+flash.c:              ^
+flash.c(501): warning:  #177-D: variable "count" was declared but never referenced
+flash.c:        uint8_t count=5;
+flash.c:                ^
+flash.c(101): warning:  #177-D: function "SpiFlash_ReadSR" was declared but never referenced
+flash.c:   static uint8_t SpiFlash_ReadSR(void)
+flash.c:                  ^
+flash.c: flash.c: 3 warnings, 0 errors
+creating preprocessor file for nrf_lcd.c...
+compiling nrf_lcd.c...
+creating preprocessor file for font.c...
+compiling font.c...
+creating preprocessor file for pic.c...
+compiling pic.c...
+linking...
+Program Size: Code=2616 RO-data=208 RW-data=4032 ZI-data=2088  
+FromELF: creating hex file...
+".\_build\blinky_arm.axf" - 0 Error(s), 5 Warning(s).
+Build target 'nRF51822'
+linking...
+Program Size: Code=2616 RO-data=208 RW-data=4032 ZI-data=2088  
+FromELF: creating hex file...
+".\_build\blinky_arm.axf" - 0 Error(s), 0 Warning(s).
+creating preprocessor file for draw_picture.c...
+draw_picture.h(16): warning:  #1-D: last line of file ends without a newline
+draw_picture.h:   #endif
+draw_picture.h:         ^
+draw_picture.h: draw_picture.c: 1 warning, 0 errors
+compiling draw_picture.c...
+draw_picture.h(16): warning:  #1-D: last line of file ends without a newline
+draw_picture.h:   #endif
+draw_picture.h:         ^
+draw_picture.h: draw_picture.c: 1 warning, 0 errors
+draw_picture.c - 0 Error(s), 1 Warning(s).
+Build target 'nRF51822'
+creating preprocessor file for main.c...
+compiling main.c...
+main.c(53): warning:  #223-D: function "DrawLine" declared implicitly
+main.c:                         DrawLine(myDis.cen_x,myDis.cen_x,myDis.cen_y-myDis.len,myDis.cen_y,isPre==0 ? GREEN : RED);
+main.c:                         ^
+main.c(66): warning:  #223-D: function "DrawLine" declared implicitly
+main.c:                 if(isPre==0)DrawLine(myDis.cen_x-2,myDis.cen_x+2,myDis.cen_y-2,myDis.cen_y+2,BLACK);
+main.c:                             ^
+main.c: main.c: 2 warnings, 0 errors
+creating preprocessor file for nrf_lcd.c...
+compiling nrf_lcd.c...
+creating preprocessor file for draw_base.c...
+compiling draw_base.c...
+creating preprocessor file for draw_picture.c...
+draw_picture.h(16): warning:  #1-D: last line of file ends without a newline
+draw_picture.h:   #endif
+draw_picture.h:         ^
+draw_picture.h: draw_picture.c: 1 warning, 0 errors
+compiling draw_picture.c...
+draw_picture.h(16): warning:  #1-D: last line of file ends without a newline
+draw_picture.h:   #endif
+draw_picture.h:         ^
+draw_picture.h: draw_picture.c: 1 warning, 0 errors
+creating preprocessor file for nrf_delay.c...
+compiling nrf_delay.c...
+creating preprocessor file for flash.c...
+compiling flash.c...
+flash.c(357): warning:  #177-D: variable "valueTemp" was declared but never referenced
+flash.c:     uint16_t valueTemp = 0;
+flash.c:              ^
+flash.c(501): warning:  #177-D: variable "count" was declared but never referenced
+flash.c:        uint8_t count=5;
+flash.c:                ^
+flash.c(101): warning:  #177-D: function "SpiFlash_ReadSR" was declared but never referenced
+flash.c:   static uint8_t SpiFlash_ReadSR(void)
+flash.c:                  ^
+flash.c: flash.c: 3 warnings, 0 errors
+creating preprocessor file for system_nrf51.c...
+compiling system_nrf51.c...
+assembling arm_startup_nrf51.s...
+creating preprocessor file for font.c...
+compiling font.c...
+creating preprocessor file for pic.c...
+compiling pic.c...
+linking...
+Program Size: Code=2616 RO-data=208 RW-data=4032 ZI-data=2088  
+FromELF: creating hex file...
+".\_build\blinky_arm.axf" - 0 Error(s), 6 Warning(s).
+Build target 'nRF51822'
+creating preprocessor file for nrf_lcd.c...
+compiling nrf_lcd.c...
+creating preprocessor file for draw_base.c...
+compiling draw_base.c...
+draw_base.c(17): warning:  #223-D: function "BlockWrite" declared implicitly
+draw_base.c:       BlockWrite(x, x, y, y);
+draw_base.c:       ^
+draw_base.c(18): error:  #20: identifier "CS_CLEAR" is undefined
+draw_base.c:       CS_CLEAR;
+draw_base.c:       ^
+draw_base.c(19): error:  #20: identifier "RS_SET" is undefined
+draw_base.c:       RS_SET;
+draw_base.c:       ^
+draw_base.c(20): warning:  #223-D: function "SendDataSPI" declared implicitly
+draw_base.c:       SendDataSPI(color >> 8);
+draw_base.c:       ^
+draw_base.c(22): error:  #20: identifier "CS_SET" is undefined
+draw_base.c:       CS_SET;
+draw_base.c:       ^
+draw_base.c(32): warning:  #223-D: function "BlockWrite" declared implicitly
+draw_base.c:       BlockWrite(Xstart, Xend, Ystart, Yend);
+draw_base.c:       ^
+draw_base.c(38): warning:  #223-D: function "WriteOneDot" declared implicitly
+draw_base.c:               WriteOneDot(color);
+draw_base.c:               ^
+draw_base.c: draw_base.c: 4 warnings, 3 errors
+creating preprocessor file for draw_picture.c...
+draw_picture.h(16): warning:  #1-D: last line of file ends without a newline
+draw_picture.h:   #endif
+draw_picture.h:         ^
+draw_picture.h: draw_picture.c: 1 warning, 0 errors
+compiling draw_picture.c...
+draw_picture.h(16): warning:  #1-D: last line of file ends without a newline
+draw_picture.h:   #endif
+draw_picture.h:         ^
+draw_picture.h: draw_picture.c: 1 warning, 0 errors
+Target not created
+Build target 'nRF51822'
+creating preprocessor file for draw_base.c...
+draw_base.h(14): warning:  #1-D: last line of file ends without a newline
+draw_base.h:   #endif
+draw_base.h:         ^
+draw_base.h: draw_base.c: 1 warning, 0 errors
+compiling draw_base.c...
+draw_base.h(14): warning:  #1-D: last line of file ends without a newline
+draw_base.h:   #endif
+draw_base.h:         ^
+draw_base.c(17): warning:  #223-D: function "BlockWrite" declared implicitly
+draw_base.c:       BlockWrite(x, x, y, y);
+draw_base.c:       ^
+draw_base.c(20): warning:  #223-D: function "SendDataSPI" declared implicitly
+draw_base.c:       SendDataSPI(color >> 8);
+draw_base.c:       ^
+draw_base.c(32): warning:  #223-D: function "BlockWrite" declared implicitly
+draw_base.c:       BlockWrite(Xstart, Xend, Ystart, Yend);
+draw_base.c:       ^
+draw_base.c(38): warning:  #223-D: function "WriteOneDot" declared implicitly
+draw_base.c:               WriteOneDot(color);
+draw_base.c:               ^
+draw_base.c: draw_base.c: 5 warnings, 0 errors
+creating preprocessor file for draw_picture.c...
+draw_picture.h(16): warning:  #1-D: last line of file ends without a newline
+draw_picture.h:   #endif
+draw_picture.h:         ^
+draw_picture.h: draw_picture.c: 1 warning, 0 errors
+compiling draw_picture.c...
+draw_picture.h(16): warning:  #1-D: last line of file ends without a newline
+draw_picture.h:   #endif
+draw_picture.h:         ^
+draw_picture.h: draw_picture.c: 1 warning, 0 errors
+linking...
+Program Size: Code=2616 RO-data=208 RW-data=4032 ZI-data=2088  
+FromELF: creating hex file...
+".\_build\blinky_arm.axf" - 0 Error(s), 6 Warning(s).
+Build target 'nRF51822'
+creating preprocessor file for nrf_lcd.c...
+compiling nrf_lcd.c...
+creating preprocessor file for draw_base.c...
+draw_base.h(14): warning:  #1-D: last line of file ends without a newline
+draw_base.h:   #endif
+draw_base.h:         ^
+draw_base.h: draw_base.c: 1 warning, 0 errors
+compiling draw_base.c...
+draw_base.h(14): warning:  #1-D: last line of file ends without a newline
+draw_base.h:   #endif
+draw_base.h:         ^
+draw_base.c(16): warning:  #223-D: function "BlockWrite" declared implicitly
+draw_base.c:       BlockWrite(Xstart, Xend, Ystart, Yend);
+draw_base.c:       ^
+draw_base.c(22): warning:  #223-D: function "WriteOneDot" declared implicitly
+draw_base.c:               WriteOneDot(color);
+draw_base.c:               ^
+draw_base.c: draw_base.c: 3 warnings, 0 errors
+creating preprocessor file for draw_text.c...
+draw_text.h(11): warning:  #1-D: last line of file ends without a newline
+draw_text.h:   #endif
+draw_text.h:         ^
+draw_text.c(122): warning:  #1-D: last line of file ends without a newline
+draw_text.c:   ////////////////////////////////////////////////////////////////////////////////////
+draw_text.c:                                                                                       ^
+draw_text.c: draw_text.c: 2 warnings, 0 errors
+compiling draw_text.c...
+draw_text.h(11): warning:  #1-D: last line of file ends without a newline
+draw_text.h:   #endif
+draw_text.h:         ^
+draw_text.c(48): warning:  #223-D: function "BlockWrite" declared implicitly
+draw_text.c:       BlockWrite(Xstart, Xstart + (FONT_W - 1), Ystart, Ystart + (FONT_H - 1));
+draw_text.c:       ^
+draw_text.c(57): error:  #20: identifier "ascii" is undefined
+draw_text.c:       p = ascii;
+draw_text.c:           ^
+draw_text.c(67): warning:  #223-D: function "WriteOneDot" declared implicitly
+draw_text.c:                   WriteOneDot(TextColor);
+draw_text.c:                   ^
+draw_text.c(71): warning:  #223-D: function "WriteOneDot" declared implicitly
+draw_text.c:                   WriteOneDot(BackColor);
+draw_text.c:                   ^
+draw_text.c(100): warning:  #223-D: function "BlockWrite" declared implicitly
+draw_text.c:       BlockWrite(0, COL - 1, 0, ROW - 1);
+draw_text.c:       ^
+draw_text.c(120): warning:  #223-D: function "BlockWrite" declared implicitly
+draw_text.c:       BlockWrite(0, COL - 1, 0, ROW - 1);
+draw_text.c:       ^
+draw_text.c(122): warning:  #1-D: last line of file ends without a newline
+draw_text.c:   ////////////////////////////////////////////////////////////////////////////////////
+draw_text.c:                                                                                       ^
+draw_text.c: draw_text.c: 7 warnings, 1 error
+Target not created
+Build target 'nRF51822'
+creating preprocessor file for draw_text.c...
+draw_text.h(12): warning:  #1-D: last line of file ends without a newline
+draw_text.h:   #endif
+draw_text.h:         ^
+draw_text.c(129): warning:  #1-D: last line of file ends without a newline
+draw_text.c:   ////////////////////////////////////////////////////////////////////////////////////
+draw_text.c:                                                                                       ^
+draw_text.c: draw_text.c: 2 warnings, 0 errors
+compiling draw_text.c...
+draw_text.h(12): warning:  #1-D: last line of file ends without a newline
+draw_text.h:   #endif
+draw_text.h:         ^
+draw_text.c(53): warning:  #223-D: function "BlockWrite" declared implicitly
+draw_text.c:       BlockWrite(Xstart, Xstart + (FONT_W - 1), Ystart, Ystart + (FONT_H - 1));
+draw_text.c:       ^
+draw_text.c(62): error:  #20: identifier "ascii" is undefined
+draw_text.c:       p = ascii;
+draw_text.c:           ^
+draw_text.c(72): warning:  #223-D: function "WriteOneDot" declared implicitly
+draw_text.c:                   WriteOneDot(TextColor);
+draw_text.c:                   ^
+draw_text.c(76): warning:  #223-D: function "WriteOneDot" declared implicitly
+draw_text.c:                   WriteOneDot(BackColor);
+draw_text.c:                   ^
+draw_text.c(107): warning:  #223-D: function "BlockWrite" declared implicitly
+draw_text.c:       BlockWrite(0, COL - 1, 0, ROW - 1);
+draw_text.c:       ^
+draw_text.c(127): warning:  #223-D: function "BlockWrite" declared implicitly
+draw_text.c:       BlockWrite(0, COL - 1, 0, ROW - 1);
+draw_text.c:       ^
+draw_text.c(129): warning:  #1-D: last line of file ends without a newline
+draw_text.c:   ////////////////////////////////////////////////////////////////////////////////////
+draw_text.c:                                                                                       ^
+draw_text.c: draw_text.c: 7 warnings, 1 error
+Target not created
+Build target 'nRF51822'
+creating preprocessor file for draw_text.c...
+draw_text.h(16): warning:  #1-D: last line of file ends without a newline
+draw_text.h:   #endif
+draw_text.h:         ^
+draw_text.c(131): warning:  #1-D: last line of file ends without a newline
+draw_text.c:   ////////////////////////////////////////////////////////////////////////////////////
+draw_text.c:                                                                                       ^
+draw_text.c: draw_text.c: 2 warnings, 0 errors
+compiling draw_text.c...
+draw_text.h(16): warning:  #1-D: last line of file ends without a newline
+draw_text.h:   #endif
+draw_text.h:         ^
+draw_text.c(62): error:  #20: identifier "ascii" is undefined
+draw_text.c:       p = ascii;
+draw_text.c:           ^
+draw_text.c(131): warning:  #1-D: last line of file ends without a newline
+draw_text.c:   ////////////////////////////////////////////////////////////////////////////////////
+draw_text.c:                                                                                       ^
+draw_text.c: draw_text.c: 2 warnings, 1 error
+Target not created
+Build target 'nRF51822'
+creating preprocessor file for draw_text.c...
+draw_text.c(131): warning:  #1-D: last line of file ends without a newline
+draw_text.c:   ////////////////////////////////////////////////////////////////////////////////////
+draw_text.c:                                                                                       ^
+draw_text.c: draw_text.c: 1 warning, 0 errors
+compiling draw_text.c...
+draw_text.c(62): error:  #20: identifier "ascii" is undefined
+draw_text.c:       p = ascii;
+draw_text.c:           ^
+draw_text.c(131): warning:  #1-D: last line of file ends without a newline
+draw_text.c:   ////////////////////////////////////////////////////////////////////////////////////
+draw_text.c:                                                                                       ^
+draw_text.c: draw_text.c: 1 warning, 1 error
+Target not created
+Build target 'nRF51822'
+creating preprocessor file for draw_text.c...
+compiling draw_text.c...
+draw_text.c(62): error:  #20: identifier "ascii" is undefined
+draw_text.c:       p = ascii;
+draw_text.c:           ^
+draw_text.c: draw_text.c: 0 warnings, 1 error
+Target not created
+Build target 'nRF51822'
+creating preprocessor file for main.c...
+compiling main.c...
+main.c(53): warning:  #223-D: function "DrawLine" declared implicitly
+main.c:                         DrawLine(myDis.cen_x,myDis.cen_x,myDis.cen_y-myDis.len,myDis.cen_y,isPre==0 ? GREEN : RED);
+main.c:                         ^
+main.c(66): warning:  #223-D: function "DrawLine" declared implicitly
+main.c:                 if(isPre==0)DrawLine(myDis.cen_x-2,myDis.cen_x+2,myDis.cen_y-2,myDis.cen_y+2,BLACK);
+main.c:                             ^
+main.c: main.c: 2 warnings, 0 errors
+creating preprocessor file for nrf_lcd.c...
+compiling nrf_lcd.c...
+creating preprocessor file for draw_base.c...
+draw_base.h(14): warning:  #1-D: last line of file ends without a newline
+draw_base.h:   #endif
+draw_base.h:         ^
+draw_base.h: draw_base.c: 1 warning, 0 errors
+compiling draw_base.c...
+draw_base.h(14): warning:  #1-D: last line of file ends without a newline
+draw_base.h:   #endif
+draw_base.h:         ^
+draw_base.c(16): warning:  #223-D: function "BlockWrite" declared implicitly
+draw_base.c:       BlockWrite(Xstart, Xend, Ystart, Yend);
+draw_base.c:       ^
+draw_base.c(22): warning:  #223-D: function "WriteOneDot" declared implicitly
+draw_base.c:               WriteOneDot(color);
+draw_base.c:               ^
+draw_base.c: draw_base.c: 3 warnings, 0 errors
+creating preprocessor file for draw_picture.c...
+draw_picture.h(16): warning:  #1-D: last line of file ends without a newline
+draw_picture.h:   #endif
+draw_picture.h:         ^
+draw_picture.h: draw_picture.c: 1 warning, 0 errors
+compiling draw_picture.c...
+draw_picture.h(16): warning:  #1-D: last line of file ends without a newline
+draw_picture.h:   #endif
+draw_picture.h:         ^
+draw_picture.h: draw_picture.c: 1 warning, 0 errors
+creating preprocessor file for draw_text.c...
+compiling draw_text.c...
+draw_text.c(62): error:  #20: identifier "ascii" is undefined
+draw_text.c:       p = ascii;
+draw_text.c:           ^
+draw_text.c: draw_text.c: 0 warnings, 1 error
+creating preprocessor file for flash.c...
+compiling flash.c...
+flash.c(357): warning:  #177-D: variable "valueTemp" was declared but never referenced
+flash.c:     uint16_t valueTemp = 0;
+flash.c:              ^
+flash.c(501): warning:  #177-D: variable "count" was declared but never referenced
+flash.c:        uint8_t count=5;
+flash.c:                ^
+flash.c(101): warning:  #177-D: function "SpiFlash_ReadSR" was declared but never referenced
+flash.c:   static uint8_t SpiFlash_ReadSR(void)
+flash.c:                  ^
+flash.c: flash.c: 3 warnings, 0 errors
+creating preprocessor file for font.c...
+compiling font.c...
+Target not created
+Build target 'nRF51822'
+creating preprocessor file for main.c...
+compiling main.c...
+main.c(53): warning:  #223-D: function "DrawLine" declared implicitly
+main.c:                         DrawLine(myDis.cen_x,myDis.cen_x,myDis.cen_y-myDis.len,myDis.cen_y,isPre==0 ? GREEN : RED);
+main.c:                         ^
+main.c(66): warning:  #223-D: function "DrawLine" declared implicitly
+main.c:                 if(isPre==0)DrawLine(myDis.cen_x-2,myDis.cen_x+2,myDis.cen_y-2,myDis.cen_y+2,BLACK);
+main.c:                             ^
+main.c(102): warning:  #223-D: function "DispInt" declared implicitly
+main.c:                 DispInt(cnt,COL/2-FONT_W*2,ROW,BLUE,RED);
+main.c:                 ^
+main.c(104): warning:  #223-D: function "DispStr" declared implicitly
+main.c:                 DispStr(FLASH_Buf,x,y,BLACK,RED); 
+main.c:                 ^
+main.c: main.c: 4 warnings, 0 errors
+creating preprocessor file for nrf_lcd.c...
+compiling nrf_lcd.c...
+creating preprocessor file for draw_base.c...
+draw_base.h(14): warning:  #1-D: last line of file ends without a newline
+draw_base.h:   #endif
+draw_base.h:         ^
+draw_base.h: draw_base.c: 1 warning, 0 errors
+compiling draw_base.c...
+draw_base.h(14): warning:  #1-D: last line of file ends without a newline
+draw_base.h:   #endif
+draw_base.h:         ^
+draw_base.h: draw_base.c: 1 warning, 0 errors
+creating preprocessor file for draw_picture.c...
+draw_picture.h(16): warning:  #1-D: last line of file ends without a newline
+draw_picture.h:   #endif
+draw_picture.h:         ^
+draw_picture.h: draw_picture.c: 1 warning, 0 errors
+compiling draw_picture.c...
+draw_picture.h(16): warning:  #1-D: last line of file ends without a newline
+draw_picture.h:   #endif
+draw_picture.h:         ^
+draw_picture.h: draw_picture.c: 1 warning, 0 errors
+creating preprocessor file for draw_text.c...
+compiling draw_text.c...
+draw_text.c(62): error:  #20: identifier "ascii" is undefined
+draw_text.c:       p = ascii;
+draw_text.c:           ^
+draw_text.c: draw_text.c: 0 warnings, 1 error
 creating preprocessor file for flash.c...
 compiling flash.c...
 flash.c(357): warning:  #177-D: variable "valueTemp" was declared but never referenced
@@ -54,3 +604,660 @@ flash.c:   static uint8_t SpiFlash_ReadSR(void)
 flash.c:                  ^
 flash.c: flash.c: 3 warnings, 0 errors
 Target not created
+Build target 'nRF51822'
+creating preprocessor file for main.c...
+compiling main.c...
+main.c(53): warning:  #223-D: function "DrawLine" declared implicitly
+main.c:                         DrawLine(myDis.cen_x,myDis.cen_x,myDis.cen_y-myDis.len,myDis.cen_y,isPre==0 ? GREEN : RED);
+main.c:                         ^
+main.c(66): warning:  #223-D: function "DrawLine" declared implicitly
+main.c:                 if(isPre==0)DrawLine(myDis.cen_x-2,myDis.cen_x+2,myDis.cen_y-2,myDis.cen_y+2,BLACK);
+main.c:                             ^
+main.c(102): warning:  #223-D: function "DispInt" declared implicitly
+main.c:                 DispInt(cnt,COL/2-FONT_W*2,ROW,BLUE,RED);
+main.c:                 ^
+main.c(104): warning:  #223-D: function "DispStr" declared implicitly
+main.c:                 DispStr(FLASH_Buf,x,y,BLACK,RED); 
+main.c:                 ^
+main.c: main.c: 4 warnings, 0 errors
+creating preprocessor file for nrf_lcd.c...
+compiling nrf_lcd.c...
+creating preprocessor file for draw_base.c...
+draw_base.h(14): warning:  #1-D: last line of file ends without a newline
+draw_base.h:   #endif
+draw_base.h:         ^
+draw_base.h: draw_base.c: 1 warning, 0 errors
+compiling draw_base.c...
+draw_base.h(14): warning:  #1-D: last line of file ends without a newline
+draw_base.h:   #endif
+draw_base.h:         ^
+draw_base.h: draw_base.c: 1 warning, 0 errors
+creating preprocessor file for draw_picture.c...
+draw_picture.h(16): warning:  #1-D: last line of file ends without a newline
+draw_picture.h:   #endif
+draw_picture.h:         ^
+draw_picture.h: draw_picture.c: 1 warning, 0 errors
+compiling draw_picture.c...
+draw_picture.h(16): warning:  #1-D: last line of file ends without a newline
+draw_picture.h:   #endif
+draw_picture.h:         ^
+draw_picture.h: draw_picture.c: 1 warning, 0 errors
+creating preprocessor file for draw_text.c...
+compiling draw_text.c...
+draw_text.c(62): error:  #20: identifier "ascii" is undefined
+draw_text.c:       p = ascii;
+draw_text.c:           ^
+draw_text.c: draw_text.c: 0 warnings, 1 error
+creating preprocessor file for flash.c...
+compiling flash.c...
+flash.c(357): warning:  #177-D: variable "valueTemp" was declared but never referenced
+flash.c:     uint16_t valueTemp = 0;
+flash.c:              ^
+flash.c(501): warning:  #177-D: variable "count" was declared but never referenced
+flash.c:        uint8_t count=5;
+flash.c:                ^
+flash.c(101): warning:  #177-D: function "SpiFlash_ReadSR" was declared but never referenced
+flash.c:   static uint8_t SpiFlash_ReadSR(void)
+flash.c:                  ^
+flash.c: flash.c: 3 warnings, 0 errors
+Target not created
+Build target 'nRF51822'
+creating preprocessor file for main.c...
+compiling main.c...
+main.c(53): warning:  #223-D: function "DrawLine" declared implicitly
+main.c:                         DrawLine(myDis.cen_x,myDis.cen_x,myDis.cen_y-myDis.len,myDis.cen_y,isPre==0 ? GREEN : RED);
+main.c:                         ^
+main.c(66): warning:  #223-D: function "DrawLine" declared implicitly
+main.c:                 if(isPre==0)DrawLine(myDis.cen_x-2,myDis.cen_x+2,myDis.cen_y-2,myDis.cen_y+2,BLACK);
+main.c:                             ^
+main.c(102): warning:  #223-D: function "DispInt" declared implicitly
+main.c:                 DispInt(cnt,COL/2-FONT_W*2,ROW,BLUE,RED);
+main.c:                 ^
+main.c(104): warning:  #223-D: function "DispStr" declared implicitly
+main.c:                 DispStr(FLASH_Buf,x,y,BLACK,RED); 
+main.c:                 ^
+main.c: main.c: 4 warnings, 0 errors
+creating preprocessor file for nrf_lcd.c...
+compiling nrf_lcd.c...
+creating preprocessor file for draw_base.c...
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                    ^
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                        ^
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                            ^
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                                ^
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                                    ^
+draw_base.h(16): warning:  #1-D: last line of file ends without a newline
+draw_base.h:   #endif
+draw_base.h:         ^
+draw_base.h: draw_base.c: 1 warning, 5 errors
+compiling draw_base.c...
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                    ^
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                        ^
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                            ^
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                                ^
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                                    ^
+draw_base.h(16): warning:  #1-D: last line of file ends without a newline
+draw_base.h:   #endif
+draw_base.h:         ^
+draw_base.h: draw_base.c: 1 warning, 5 errors
+creating preprocessor file for draw_picture.c...
+draw_picture.h(16): warning:  #1-D: last line of file ends without a newline
+draw_picture.h:   #endif
+draw_picture.h:         ^
+draw_picture.h: draw_picture.c: 1 warning, 0 errors
+compiling draw_picture.c...
+draw_picture.h(16): warning:  #1-D: last line of file ends without a newline
+draw_picture.h:   #endif
+draw_picture.h:         ^
+draw_picture.h: draw_picture.c: 1 warning, 0 errors
+creating preprocessor file for draw_text.c...
+compiling draw_text.c...
+draw_text.c(62): error:  #20: identifier "ascii" is undefined
+draw_text.c:       p = ascii;
+draw_text.c:           ^
+draw_text.c: draw_text.c: 0 warnings, 1 error
+creating preprocessor file for flash.c...
+compiling flash.c...
+flash.c(357): warning:  #177-D: variable "valueTemp" was declared but never referenced
+flash.c:     uint16_t valueTemp = 0;
+flash.c:              ^
+flash.c(501): warning:  #177-D: variable "count" was declared but never referenced
+flash.c:        uint8_t count=5;
+flash.c:                ^
+flash.c(101): warning:  #177-D: function "SpiFlash_ReadSR" was declared but never referenced
+flash.c:   static uint8_t SpiFlash_ReadSR(void)
+flash.c:                  ^
+flash.c: flash.c: 3 warnings, 0 errors
+Target not created
+Build target 'nRF51822'
+creating preprocessor file for main.c...
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                    ^
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                        ^
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                            ^
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                                ^
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                                    ^
+draw_base.h(16): warning:  #1-D: last line of file ends without a newline
+draw_base.h:   #endif
+draw_base.h:         ^
+draw_picture.h(16): warning:  #1-D: last line of file ends without a newline
+draw_picture.h:   #endif
+draw_picture.h:         ^
+draw_picture.h: main.c: 2 warnings, 5 errors
+compiling main.c...
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                    ^
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                        ^
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                            ^
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                                ^
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                                    ^
+draw_base.h(16): warning:  #1-D: last line of file ends without a newline
+draw_base.h:   #endif
+draw_base.h:         ^
+draw_picture.h(16): warning:  #1-D: last line of file ends without a newline
+draw_picture.h:   #endif
+draw_picture.h:         ^
+draw_picture.h: main.c: 2 warnings, 5 errors
+compiling draw_base.c...
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                    ^
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                        ^
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                            ^
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                                ^
+draw_base.h(14): error:  #40: expected an identifier
+draw_base.h:   #define DrawBand((a),(b),(c),(d),(e)) DrawLine((a),(b),(c),(d),(e))
+draw_base.h:                                    ^
+draw_base.h(16): warning:  #1-D: last line of file ends without a newline
+draw_base.h:   #endif
+draw_base.h:         ^
+draw_base.h: draw_base.c: 1 warning, 5 errors
+compiling draw_text.c...
+draw_text.c(62): error:  #20: identifier "ascii" is undefined
+draw_text.c:       p = ascii;
+draw_text.c:           ^
+draw_text.c: draw_text.c: 0 warnings, 1 error
+Target not created
+Build target 'nRF51822'
+creating preprocessor file for main.c...
+draw_base.h(16): warning:  #1-D: last line of file ends without a newline
+draw_base.h:   #endif
+draw_base.h:         ^
+draw_picture.h(16): warning:  #1-D: last line of file ends without a newline
+draw_picture.h:   #endif
+draw_picture.h:         ^
+draw_picture.h: main.c: 2 warnings, 0 errors
+compiling main.c...
+draw_base.h(16): warning:  #1-D: last line of file ends without a newline
+draw_base.h:   #endif
+draw_base.h:         ^
+draw_picture.h(16): warning:  #1-D: last line of file ends without a newline
+draw_picture.h:   #endif
+draw_picture.h:         ^
+draw_picture.h: main.c: 2 warnings, 0 errors
+creating preprocessor file for draw_base.c...
+draw_base.h(16): warning:  #1-D: last line of file ends without a newline
+draw_base.h:   #endif
+draw_base.h:         ^
+draw_base.h: draw_base.c: 1 warning, 0 errors
+compiling draw_base.c...
+draw_base.h(16): warning:  #1-D: last line of file ends without a newline
+draw_base.h:   #endif
+draw_base.h:         ^
+draw_base.h: draw_base.c: 1 warning, 0 errors
+compiling draw_text.c...
+draw_text.c(62): error:  #20: identifier "ascii" is undefined
+draw_text.c:       p = ascii;
+draw_text.c:           ^
+draw_text.c: draw_text.c: 0 warnings, 1 error
+Target not created
+Build target 'nRF51822'
+creating preprocessor file for main.c...
+compiling main.c...
+creating preprocessor file for draw_base.c...
+compiling draw_base.c...
+creating preprocessor file for draw_picture.c...
+compiling draw_picture.c...
+compiling draw_text.c...
+draw_text.c(62): error:  #20: identifier "ascii" is undefined
+draw_text.c:       p = ascii;
+draw_text.c:           ^
+draw_text.c: draw_text.c: 0 warnings, 1 error
+Target not created
+Build target 'nRF51822'
+creating preprocessor file for main.c...
+compiling main.c...
+creating preprocessor file for nrf_lcd.c...
+compiling nrf_lcd.c...
+creating preprocessor file for draw_base.c...
+compiling draw_base.c...
+creating preprocessor file for draw_picture.c...
+compiling draw_picture.c...
+creating preprocessor file for draw_text.c...
+compiling draw_text.c...
+draw_text.c(62): error:  #20: identifier "ascii" is undefined
+draw_text.c:       p = ascii;
+draw_text.c:           ^
+draw_text.c: draw_text.c: 0 warnings, 1 error
+creating preprocessor file for nrf_delay.c...
+compiling nrf_delay.c...
+creating preprocessor file for flash.c...
+compiling flash.c...
+flash.c(357): warning:  #177-D: variable "valueTemp" was declared but never referenced
+flash.c:     uint16_t valueTemp = 0;
+flash.c:              ^
+flash.c(501): warning:  #177-D: variable "count" was declared but never referenced
+flash.c:        uint8_t count=5;
+flash.c:                ^
+flash.c(101): warning:  #177-D: function "SpiFlash_ReadSR" was declared but never referenced
+flash.c:   static uint8_t SpiFlash_ReadSR(void)
+flash.c:                  ^
+flash.c: flash.c: 3 warnings, 0 errors
+creating preprocessor file for system_nrf51.c...
+compiling system_nrf51.c...
+assembling arm_startup_nrf51.s...
+creating preprocessor file for font.c...
+compiling font.c...
+creating preprocessor file for pic.c...
+compiling pic.c...
+Target not created
+Build target 'nRF51822'
+creating preprocessor file for main.c...
+compiling main.c...
+creating preprocessor file for draw_text.c...
+compiling draw_text.c...
+draw_text.c(62): error:  #20: identifier "ascii" is undefined
+draw_text.c:       p = ascii;
+draw_text.c:           ^
+draw_text.c: draw_text.c: 0 warnings, 1 error
+Target not created
+Build target 'nRF51822'
+creating preprocessor file for nrf_lcd.c...
+compiling nrf_lcd.c...
+creating preprocessor file for draw_text.c...
+compiling draw_text.c...
+linking...
+Program Size: Code=2616 RO-data=208 RW-data=4032 ZI-data=2088  
+FromELF: creating hex file...
+".\_build\blinky_arm.axf" - 0 Error(s), 0 Warning(s).
+Build target 'nRF51822'
+creating preprocessor file for draw_text.c...
+compiling draw_text.c...
+linking...
+Program Size: Code=2616 RO-data=208 RW-data=4032 ZI-data=2088  
+FromELF: creating hex file...
+".\_build\blinky_arm.axf" - 0 Error(s), 0 Warning(s).
+Build target 'nRF51822'
+creating preprocessor file for main.c...
+compiling main.c...
+creating preprocessor file for nrf_lcd.c...
+compiling nrf_lcd.c...
+creating preprocessor file for draw_base.c...
+compiling draw_base.c...
+creating preprocessor file for draw_picture.c...
+compiling draw_picture.c...
+creating preprocessor file for draw_text.c...
+compiling draw_text.c...
+creating preprocessor file for nrf_delay.c...
+compiling nrf_delay.c...
+creating preprocessor file for flash.c...
+compiling flash.c...
+flash.c(357): warning:  #177-D: variable "valueTemp" was declared but never referenced
+flash.c:     uint16_t valueTemp = 0;
+flash.c:              ^
+flash.c(501): warning:  #177-D: variable "count" was declared but never referenced
+flash.c:        uint8_t count=5;
+flash.c:                ^
+flash.c(101): warning:  #177-D: function "SpiFlash_ReadSR" was declared but never referenced
+flash.c:   static uint8_t SpiFlash_ReadSR(void)
+flash.c:                  ^
+flash.c: flash.c: 3 warnings, 0 errors
+creating preprocessor file for system_nrf51.c...
+compiling system_nrf51.c...
+assembling arm_startup_nrf51.s...
+creating preprocessor file for font.c...
+compiling font.c...
+creating preprocessor file for pic.c...
+compiling pic.c...
+linking...
+Program Size: Code=2616 RO-data=208 RW-data=4032 ZI-data=2088  
+FromELF: creating hex file...
+".\_build\blinky_arm.axf" - 0 Error(s), 3 Warning(s).
+Build target 'nRF51822'
+creating preprocessor file for main.c...
+compiling main.c...
+creating preprocessor file for draw_picture.c...
+compiling draw_picture.c...
+draw_picture.c(35): error:  #18: expected a ")"
+draw_picture.c:   void DispPic(unsigned int code *picture)
+draw_picture.c:                                  ^
+draw_picture.c(50): error:  #20: identifier "picture" is undefined
+draw_picture.c:               p = picture;
+draw_picture.c:                   ^
+draw_picture.c(51): warning:  #186-D: pointless comparison of unsigned integer with zero
+draw_picture.c:               for(k = 0; k < COL / PIC_WIDTH; k++) //k-col repeat count
+draw_picture.c:                            ^
+draw_picture.c(55): warning:  #223-D: function "SendDataSPI" declared implicitly
+draw_picture.c:                       SendDataSPI((*(p + i * PIC_HEIGHT + j)) >> 8);
+draw_picture.c:                       ^
+draw_picture.c(63): warning:  #223-D: function "SendDataSPI" declared implicitly
+draw_picture.c:                   SendDataSPI((*(p + i * PIC_HEIGHT + j)) >> 8);
+draw_picture.c:                   ^
+draw_picture.c(69): warning:  #186-D: pointless comparison of unsigned integer with zero
+draw_picture.c:       for(i = 0; i < ROW % PIC_HEIGHT; i++)
+draw_picture.c:                    ^
+draw_picture.c(71): error:  #20: identifier "picture" is undefined
+draw_picture.c:           p = picture;
+draw_picture.c:               ^
+draw_picture.c(72): warning:  #186-D: pointless comparison of unsigned integer with zero
+draw_picture.c:           for(k = 0; k < COL / PIC_WIDTH; k++) //k-col repeat count
+draw_picture.c:                        ^
+draw_picture.c(76): warning:  #223-D: function "SendDataSPI" declared implicitly
+draw_picture.c:                   SendDataSPI((*(p + i * PIC_HEIGHT + j)) >> 8);
+draw_picture.c:                   ^
+draw_picture.c(85): warning:  #223-D: function "SendDataSPI" declared implicitly
+draw_picture.c:               SendDataSPI((*(p + i * PIC_HEIGHT + j)) >> 8);
+draw_picture.c:               ^
+draw_picture.c(91): error:  #20: identifier "CS0" is undefined
+draw_picture.c:       CS0 = 1;
+draw_picture.c:       ^
+draw_picture.c: draw_picture.c: 7 warnings, 4 errors
+Target not created
+Build target 'nRF51822'
+creating preprocessor file for draw_picture.c...
+compiling draw_picture.c...
+draw_picture.c(35): error:  #18: expected a ")"
+draw_picture.c:   void DispPic(unsigned int code *picture)
+draw_picture.c:                                  ^
+draw_picture.c(50): error:  #20: identifier "picture" is undefined
+draw_picture.c:               p = picture;
+draw_picture.c:                   ^
+draw_picture.c(51): warning:  #186-D: pointless comparison of unsigned integer with zero
+draw_picture.c:               for(k = 0; k < COL / PIC_WIDTH; k++) //k-col repeat count
+draw_picture.c:                            ^
+draw_picture.c(55): warning:  #223-D: function "SendDataSPI" declared implicitly
+draw_picture.c:                       SendDataSPI((*(p + i * PIC_HEIGHT + j)) >> 8);
+draw_picture.c:                       ^
+draw_picture.c(63): warning:  #223-D: function "SendDataSPI" declared implicitly
+draw_picture.c:                   SendDataSPI((*(p + i * PIC_HEIGHT + j)) >> 8);
+draw_picture.c:                   ^
+draw_picture.c(69): warning:  #186-D: pointless comparison of unsigned integer with zero
+draw_picture.c:       for(i = 0; i < ROW % PIC_HEIGHT; i++)
+draw_picture.c:                    ^
+draw_picture.c(71): error:  #20: identifier "picture" is undefined
+draw_picture.c:           p = picture;
+draw_picture.c:               ^
+draw_picture.c(72): warning:  #186-D: pointless comparison of unsigned integer with zero
+draw_picture.c:           for(k = 0; k < COL / PIC_WIDTH; k++) //k-col repeat count
+draw_picture.c:                        ^
+draw_picture.c(76): warning:  #223-D: function "SendDataSPI" declared implicitly
+draw_picture.c:                   SendDataSPI((*(p + i * PIC_HEIGHT + j)) >> 8);
+draw_picture.c:                   ^
+draw_picture.c(85): warning:  #223-D: function "SendDataSPI" declared implicitly
+draw_picture.c:               SendDataSPI((*(p + i * PIC_HEIGHT + j)) >> 8);
+draw_picture.c:               ^
+draw_picture.c: draw_picture.c: 7 warnings, 3 errors
+Target not created
+Build target 'nRF51822'
+creating preprocessor file for draw_picture.c...
+compiling draw_picture.c...
+draw_picture.c(51): warning:  #186-D: pointless comparison of unsigned integer with zero
+draw_picture.c:               for(k = 0; k < COL / PIC_WIDTH; k++) //k-col repeat count
+draw_picture.c:                            ^
+draw_picture.c(55): warning:  #223-D: function "SendDataSPI" declared implicitly
+draw_picture.c:                       SendDataSPI((*(p + i * PIC_HEIGHT + j)) >> 8);
+draw_picture.c:                       ^
+draw_picture.c(63): warning:  #223-D: function "SendDataSPI" declared implicitly
+draw_picture.c:                   SendDataSPI((*(p + i * PIC_HEIGHT + j)) >> 8);
+draw_picture.c:                   ^
+draw_picture.c(69): warning:  #186-D: pointless comparison of unsigned integer with zero
+draw_picture.c:       for(i = 0; i < ROW % PIC_HEIGHT; i++)
+draw_picture.c:                    ^
+draw_picture.c(72): warning:  #186-D: pointless comparison of unsigned integer with zero
+draw_picture.c:           for(k = 0; k < COL / PIC_WIDTH; k++) //k-col repeat count
+draw_picture.c:                        ^
+draw_picture.c(76): warning:  #223-D: function "SendDataSPI" declared implicitly
+draw_picture.c:                   SendDataSPI((*(p + i * PIC_HEIGHT + j)) >> 8);
+draw_picture.c:                   ^
+draw_picture.c(85): warning:  #223-D: function "SendDataSPI" declared implicitly
+draw_picture.c:               SendDataSPI((*(p + i * PIC_HEIGHT + j)) >> 8);
+draw_picture.c:               ^
+draw_picture.c: draw_picture.c: 7 warnings, 0 errors
+linking...
+Program Size: Code=2616 RO-data=208 RW-data=4032 ZI-data=2088  
+FromELF: creating hex file...
+".\_build\blinky_arm.axf" - 0 Error(s), 7 Warning(s).
+Build target 'nRF51822'
+creating preprocessor file for draw_picture.c...
+compiling draw_picture.c...
+draw_picture.c(51): warning:  #186-D: pointless comparison of unsigned integer with zero
+draw_picture.c:               for(k = 0; k < COL / PIC_WIDTH; k++) //k-col repeat count
+draw_picture.c:                            ^
+draw_picture.c(55): warning:  #223-D: function "SendDataSPI" declared implicitly
+draw_picture.c:                       SendDataSPI((*(p + i * PIC_HEIGHT + j)) >> 8);
+draw_picture.c:                       ^
+draw_picture.c(63): error:  #79: expected a type specifier
+draw_picture.c:                                 void WriteDispData((*(p + i * PIC_HEIGHT + j)) >> 8,*(p + i * PIC_HEIGHT + j));
+draw_picture.c:                                                    ^
+draw_picture.c(63): error:  #79: expected a type specifier
+draw_picture.c:                                 void WriteDispData((*(p + i * PIC_HEIGHT + j)) >> 8,*(p + i * PIC_HEIGHT + j));
+draw_picture.c:                                                                                     ^
+draw_picture.c(68): warning:  #186-D: pointless comparison of unsigned integer with zero
+draw_picture.c:       for(i = 0; i < ROW % PIC_HEIGHT; i++)
+draw_picture.c:                    ^
+draw_picture.c(71): warning:  #186-D: pointless comparison of unsigned integer with zero
+draw_picture.c:           for(k = 0; k < COL / PIC_WIDTH; k++) //k-col repeat count
+draw_picture.c:                        ^
+draw_picture.c(75): warning:  #223-D: function "SendDataSPI" declared implicitly
+draw_picture.c:                   SendDataSPI((*(p + i * PIC_HEIGHT + j)) >> 8);
+draw_picture.c:                   ^
+draw_picture.c(84): warning:  #223-D: function "SendDataSPI" declared implicitly
+draw_picture.c:               SendDataSPI((*(p + i * PIC_HEIGHT + j)) >> 8);
+draw_picture.c:               ^
+draw_picture.c: draw_picture.c: 6 warnings, 2 errors
+Target not created
+Build target 'nRF51822'
+creating preprocessor file for draw_picture.c...
+compiling draw_picture.c...
+draw_picture.c(51): warning:  #186-D: pointless comparison of unsigned integer with zero
+draw_picture.c:               for(k = 0; k < COL / PIC_WIDTH; k++) //k-col repeat count
+draw_picture.c:                            ^
+draw_picture.c(55): warning:  #223-D: function "SendDataSPI" declared implicitly
+draw_picture.c:                       SendDataSPI((*(p + i * PIC_HEIGHT + j)) >> 8);
+draw_picture.c:                       ^
+draw_picture.c(63): warning:  #223-D: function "WriteDispData" declared implicitly
+draw_picture.c:                                 WriteDispData((*(p + i * PIC_HEIGHT + j)) >> 8,*(p + i * PIC_HEIGHT + j));
+draw_picture.c:                                 ^
+draw_picture.c(68): warning:  #186-D: pointless comparison of unsigned integer with zero
+draw_picture.c:       for(i = 0; i < ROW % PIC_HEIGHT; i++)
+draw_picture.c:                    ^
+draw_picture.c(71): warning:  #186-D: pointless comparison of unsigned integer with zero
+draw_picture.c:           for(k = 0; k < COL / PIC_WIDTH; k++) //k-col repeat count
+draw_picture.c:                        ^
+draw_picture.c(75): warning:  #223-D: function "SendDataSPI" declared implicitly
+draw_picture.c:                   SendDataSPI((*(p + i * PIC_HEIGHT + j)) >> 8);
+draw_picture.c:                   ^
+draw_picture.c(84): warning:  #223-D: function "SendDataSPI" declared implicitly
+draw_picture.c:               SendDataSPI((*(p + i * PIC_HEIGHT + j)) >> 8);
+draw_picture.c:               ^
+draw_picture.c: draw_picture.c: 7 warnings, 0 errors
+linking...
+Program Size: Code=2616 RO-data=208 RW-data=4032 ZI-data=2088  
+FromELF: creating hex file...
+".\_build\blinky_arm.axf" - 0 Error(s), 7 Warning(s).
+Build target 'nRF51822'
+creating preprocessor file for main.c...
+compiling main.c...
+creating preprocessor file for nrf_lcd.c...
+compiling nrf_lcd.c...
+creating preprocessor file for draw_base.c...
+compiling draw_base.c...
+creating preprocessor file for draw_picture.c...
+compiling draw_picture.c...
+draw_picture.c(51): warning:  #186-D: pointless comparison of unsigned integer with zero
+draw_picture.c:               for(k = 0; k < COL / PIC_WIDTH; k++) //k-col repeat count
+draw_picture.c:                            ^
+draw_picture.c(67): warning:  #186-D: pointless comparison of unsigned integer with zero
+draw_picture.c:       for(i = 0; i < ROW % PIC_HEIGHT; i++)
+draw_picture.c:                    ^
+draw_picture.c(70): warning:  #186-D: pointless comparison of unsigned integer with zero
+draw_picture.c:           for(k = 0; k < COL / PIC_WIDTH; k++) //k-col repeat count
+draw_picture.c:                        ^
+draw_picture.c: draw_picture.c: 3 warnings, 0 errors
+creating preprocessor file for draw_text.c...
+compiling draw_text.c...
+creating preprocessor file for flash.c...
+compiling flash.c...
+flash.c(357): warning:  #177-D: variable "valueTemp" was declared but never referenced
+flash.c:     uint16_t valueTemp = 0;
+flash.c:              ^
+flash.c(501): warning:  #177-D: variable "count" was declared but never referenced
+flash.c:        uint8_t count=5;
+flash.c:                ^
+flash.c(101): warning:  #177-D: function "SpiFlash_ReadSR" was declared but never referenced
+flash.c:   static uint8_t SpiFlash_ReadSR(void)
+flash.c:                  ^
+flash.c: flash.c: 3 warnings, 0 errors
+linking...
+Program Size: Code=2616 RO-data=208 RW-data=4032 ZI-data=2088  
+FromELF: creating hex file...
+".\_build\blinky_arm.axf" - 0 Error(s), 6 Warning(s).
+Build target 'nRF51822'
+creating preprocessor file for draw_picture.c...
+compiling draw_picture.c...
+draw_picture.c(51): warning:  #186-D: pointless comparison of unsigned integer with zero
+draw_picture.c:               for(k = 0; k < COL / PIC_WIDTH; k++) //k-col repeat count
+draw_picture.c:                            ^
+draw_picture.c(70): warning:  #186-D: pointless comparison of unsigned integer with zero
+draw_picture.c:           for(k = 0; k < COL / PIC_WIDTH; k++) //k-col repeat count
+draw_picture.c:                        ^
+draw_picture.c: draw_picture.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=2616 RO-data=208 RW-data=4032 ZI-data=2088  
+FromELF: creating hex file...
+".\_build\blinky_arm.axf" - 0 Error(s), 2 Warning(s).
+Build target 'nRF51822'
+creating preprocessor file for draw_picture.c...
+compiling draw_picture.c...
+linking...
+Program Size: Code=2616 RO-data=208 RW-data=4032 ZI-data=2088  
+FromELF: creating hex file...
+".\_build\blinky_arm.axf" - 0 Error(s), 0 Warning(s).
+Build target 'nRF51822'
+creating preprocessor file for main.c...
+compiling main.c...
+creating preprocessor file for nrf_lcd.c...
+compiling nrf_lcd.c...
+creating preprocessor file for draw_base.c...
+compiling draw_base.c...
+creating preprocessor file for draw_picture.c...
+compiling draw_picture.c...
+creating preprocessor file for draw_text.c...
+compiling draw_text.c...
+creating preprocessor file for nrf_delay.c...
+compiling nrf_delay.c...
+creating preprocessor file for flash.c...
+compiling flash.c...
+flash.c(357): warning:  #177-D: variable "valueTemp" was declared but never referenced
+flash.c:     uint16_t valueTemp = 0;
+flash.c:              ^
+flash.c(501): warning:  #177-D: variable "count" was declared but never referenced
+flash.c:        uint8_t count=5;
+flash.c:                ^
+flash.c(101): warning:  #177-D: function "SpiFlash_ReadSR" was declared but never referenced
+flash.c:   static uint8_t SpiFlash_ReadSR(void)
+flash.c:                  ^
+flash.c: flash.c: 3 warnings, 0 errors
+creating preprocessor file for system_nrf51.c...
+compiling system_nrf51.c...
+assembling arm_startup_nrf51.s...
+creating preprocessor file for font.c...
+compiling font.c...
+creating preprocessor file for pic.c...
+compiling pic.c...
+linking...
+Program Size: Code=2616 RO-data=208 RW-data=4032 ZI-data=2088  
+FromELF: creating hex file...
+".\_build\blinky_arm.axf" - 0 Error(s), 3 Warning(s).
+Build target 'nRF51822'
+creating preprocessor file for main.c...
+compiling main.c...
+creating preprocessor file for nrf_lcd.c...
+compiling nrf_lcd.c...
+creating preprocessor file for draw_base.c...
+compiling draw_base.c...
+creating preprocessor file for draw_picture.c...
+compiling draw_picture.c...
+creating preprocessor file for draw_text.c...
+compiling draw_text.c...
+creating preprocessor file for nrf_delay.c...
+compiling nrf_delay.c...
+creating preprocessor file for flash.c...
+compiling flash.c...
+flash.c(357): warning:  #177-D: variable "valueTemp" was declared but never referenced
+flash.c:     uint16_t valueTemp = 0;
+flash.c:              ^
+flash.c(501): warning:  #177-D: variable "count" was declared but never referenced
+flash.c:        uint8_t count=5;
+flash.c:                ^
+flash.c(101): warning:  #177-D: function "SpiFlash_ReadSR" was declared but never referenced
+flash.c:   static uint8_t SpiFlash_ReadSR(void)
+flash.c:                  ^
+flash.c: flash.c: 3 warnings, 0 errors
+creating preprocessor file for system_nrf51.c...
+compiling system_nrf51.c...
+assembling arm_startup_nrf51.s...
+creating preprocessor file for font.c...
+compiling font.c...
+creating preprocessor file for pic.c...
+compiling pic.c...
+linking...
+Program Size: Code=2616 RO-data=208 RW-data=4032 ZI-data=2088  
+FromELF: creating hex file...
+".\_build\blinky_arm.axf" - 0 Error(s), 3 Warning(s).
+Clean started: Project: 'blinky'
+   deleting intermediate output files for target 'nRF51822'
+   deleting intermediate output files for target 'nRF51822_S110'
