@@ -1,0 +1,10 @@
+.\_build\nrf_delay.o: nrf_delay.c
+.\_build\nrf_delay.o: .\include\compiler_abstraction.h
+.\_build\nrf_delay.o: .\include\nrf.h
+.\_build\nrf_delay.o: .\include\nrf51.h
+.\_build\nrf_delay.o: C:\Keil-ARM\ARM\RV31\INC\core_cm0.h
+.\_build\nrf_delay.o: C:\Keil-ARM\ARM\RV31\INC\stdint.h
+.\_build\nrf_delay.o: .\include\system_nrf51.h
+.\_build\nrf_delay.o: .\include\nrf51_bitfields.h
+.\_build\nrf_delay.o: .\include\nrf51_deprecated.h
+.\_build\nrf_delay.o: .\include\nrf_delay.h

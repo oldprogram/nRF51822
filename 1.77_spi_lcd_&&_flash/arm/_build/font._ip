@@ -1,0 +1,1 @@
+"font.c" -E -c --cpu Cortex-M0 -D__MICROLIB --li -O0 --apcs=interwork --split_sections -I..\..\..\..\Include -I.\include --c99 -I "C:\Keil-ARM\ARM\INC" -I "C:\Keil-ARM\ARM\INC\..\Device\Nordic\nRF51822\Include" -DNRF51 -DSETUPA -DBOARD_PCA10001 -DFLASH_TEST -o ".\_build\font.i"

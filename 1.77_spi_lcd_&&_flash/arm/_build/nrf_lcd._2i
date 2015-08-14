@@ -1,0 +1,5 @@
+-c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I..\..\..\..\Include -I.\include --c99
+-I D:\Keil\ARM\RV31\INC
+-I D:\Keil\ARM\CMSIS\Include
+-I D:\Keil\ARM\Device\Nordic\nRF51822\Include
+-DNRF51 -DSETUPA -DBOARD_PCA10001 -DFLASH_TEST -o .\_build\nrf_lcd.o --omf_browse .\_build\nrf_lcd.crf --depend .\_build\nrf_lcd.d --feedback ".\_build\blinky_arm.fed" "nrf_lcd.c"

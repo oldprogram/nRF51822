@@ -1,0 +1,56 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\LiTao\Desktop\OLED≤‚ ‘≥Ã–Ú2\OLED_example\OLED_example\arm\blinky.uvproj
+Project File Date:  08/14/2015
+
+<h2>Output:</h2>
+Build target 'nRF51822'
+creating preprocessor file for main.c...
+compiling main.c...
+main.c(53): warning:  #223-D: function "DrawLine" declared implicitly
+main.c:                         DrawLine(myDis.cen_x,myDis.cen_x,myDis.cen_y-myDis.len,myDis.cen_y,isPre==0 ? GREEN : RED);
+main.c:                         ^
+main.c(66): warning:  #223-D: function "DrawLine" declared implicitly
+main.c:                 if(isPre==0)DrawLine(myDis.cen_x-2,myDis.cen_x+2,myDis.cen_y-2,myDis.cen_y+2,BLACK);
+main.c:                             ^
+main.c: main.c: 2 warnings, 0 errors
+creating preprocessor file for system_nrf51.c...
+compiling system_nrf51.c...
+creating preprocessor file for nrf_delay.c...
+compiling nrf_delay.c...
+creating preprocessor file for nrf_lcd.c...
+compiling nrf_lcd.c...
+nrf_lcd.c(2): error:  #29: expected an expression
+nrf_lcd.c:   unsigned short int  PIC[ROW][COL] =        {};
+nrf_lcd.c:                                               ^
+nrf_lcd.c(221): error:  #20: identifier "LCD_CS" is undefined
+nrf_lcd.c:      nrf_gpio_pin_clear(LCD_CS);
+nrf_lcd.c:                         ^
+nrf_lcd.c(222): error:  #20: identifier "LCD_DC" is undefined
+nrf_lcd.c:     nrf_gpio_pin_set(LCD_DC);//DC(RS) low means send cmd
+nrf_lcd.c:                      ^
+nrf_lcd.c(214): warning:  #177-D: variable "n" was declared but never referenced
+nrf_lcd.c:      unsigned int  n,k; //n-row repeat count,k-col repeat count
+nrf_lcd.c:                    ^
+nrf_lcd.c(214): warning:  #177-D: variable "k" was declared but never referenced
+nrf_lcd.c:      unsigned int  n,k; //n-row repeat count,k-col repeat count
+nrf_lcd.c:                      ^
+nrf_lcd.c: nrf_lcd.c: 2 warnings, 3 errors
+creating preprocessor file for font.c...
+compiling font.c...
+creating preprocessor file for flash.c...
+compiling flash.c...
+flash.c(357): warning:  #177-D: variable "valueTemp" was declared but never referenced
+flash.c:     uint16_t valueTemp = 0;
+flash.c:              ^
+flash.c(501): warning:  #177-D: variable "count" was declared but never referenced
+flash.c:        uint8_t count=5;
+flash.c:                ^
+flash.c(101): warning:  #177-D: function "SpiFlash_ReadSR" was declared but never referenced
+flash.c:   static uint8_t SpiFlash_ReadSR(void)
+flash.c:                  ^
+flash.c: flash.c: 3 warnings, 0 errors
+Target not created

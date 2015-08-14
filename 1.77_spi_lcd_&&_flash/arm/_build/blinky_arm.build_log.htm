@@ -1,0 +1,91 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\xcase\project_bck\OLED≤‚ ‘≥Ã–Ú\OLED_example\OLED_example\arm\blinky.uvproj
+Project File Date:  08/13/2015
+
+<h2>Output:</h2>
+Rebuild target 'nRF51822'
+Clean started - Project: 'blinky'
+   deleting intermediate output files for target 'nRF51822'
+creating preprocessor file for main.c...
+compiling main.c...
+creating preprocessor file for system_nrf51.c...
+compiling system_nrf51.c...
+assembling arm_startup_nrf51.s...
+creating preprocessor file for nrf_delay.c...
+compiling nrf_delay.c...
+creating preprocessor file for nrf_lcd.c...
+compiling nrf_lcd.c...
+creating preprocessor file for font.c...
+compiling font.c...
+creating preprocessor file for flash.c...
+compiling flash.c...
+flash.c(357): warning:  #177-D: variable "valueTemp" was declared but never referenced
+    uint16_t valueTemp = 0;
+flash.c(501): warning:  #177-D: variable "count" was declared but never referenced
+        uint8_t count=5;
+flash.c(101): warning:  #177-D: function "SpiFlash_ReadSR" was declared but never referenced
+  static uint8_t SpiFlash_ReadSR(void)
+flash.c: 3 warnings, 0 errors
+linking...
+Program Size: Code=2596 RO-data=208 RW-data=4032 ZI-data=2088  
+".\_build\blinky_arm.axf" - 0 Error(s), 3 Warning(s).
+
+*** Performing Cross-Module-Optimization:
+compiling main.c...
+compiling system_nrf51.c...
+compiling nrf_delay.c...
+compiling nrf_lcd.c...
+compiling flash.c...
+flash.c(357): warning:  #177-D: variable "valueTemp" was declared but never referenced
+    uint16_t valueTemp = 0;
+flash.c(501): warning:  #177-D: variable "count" was declared but never referenced
+        uint8_t count=5;
+flash.c(101): warning:  #177-D: function "SpiFlash_ReadSR" was declared but never referenced
+  static uint8_t SpiFlash_ReadSR(void)
+flash.c: 3 warnings, 0 errors
+linking...
+Program Size: Code=2596 RO-data=208 RW-data=4032 ZI-data=2088  
+FromELF: creating hex file...
+".\_build\blinky_arm.axf" - 0 Error(s), 3 Warning(s).
+*** Completed Cross-Module-Optimization after 2 iteration(s).
+</pre>
+</body>
+</html>
+ck\\OLED≤‚ ‘≥Ã–Ú\\OLED_example\\OLED_example\\arm\\_build\\blinky_arm.axf" 
+Set JLink Project File to "D:\xcase\project_bck\OLED≤‚ ‘≥Ã–Ú\OLED_example\OLED_example\arm\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.60a, compiled Jan 16 2013 17:15:30
+Firmware: J-Link ARM V8 compiled Nov 14 2012 22:34:52
+Hardware: V8.00
+S/N : 99991999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+***JLink Error: Supply voltage too low (1 Volt is required, Measured: 0.0 Volt).
+Please check target power.
+Error: Flash Download failed  -  Target DLL has been cancelled
+.c(490): error:  #20: identifier "FLASH_HOLD" is undefined
+        nrf_gpio_cfg_output(FLASH_HOLD);
+flash.c(491): error:  #20: identifier "FLASH_POWER_EN" is undefined
+        nrf_gpio_cfg_output(FLASH_POWER_EN);
+flash.c(493): error:  #20: identifier "SPI_FLASH_CS" is undefined
+        nrf_gpio_cfg_output(SPI_FLASH_CS);
+flash.c(494): error:  #20: identifier "SPI_FLASH_CLK" is undefined
+        nrf_gpio_cfg_output(SPI_FLASH_CLK);
+flash.c(495): error:  #20: identifier "SPI_FLASH_MOSI" is undefined
+        nrf_gpio_cfg_output(SPI_FLASH_MOSI);
+flash.c(496): error:  #20: identifier "SPI_FLASH_MISO" is undefined
+        nrf_gpio_cfg_input(SPI_FLASH_MISO,NRF_GPIO_PIN_NOPULL);
+flash.c(101): warning:  #177-D: function "SpiFlash_ReadSR" was declared but never referenced
+  static uint8_t SpiFlash_ReadSR(void)
+flash.c: 2 warnings, 22 errors
+".\_build\blinky_arm.axf" - 22 Error(s), 2 Warning(s).
+
+*** Performing Cross-Module-Optimization:
+*** Feedback file '.\_build\blinky_arm.fed' not found.
+Target not created
