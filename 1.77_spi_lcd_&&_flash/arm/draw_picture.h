@@ -3,6 +3,8 @@
 
 
 #define EVAL_PIC
+#define SD_DEMO_PIC
+
 
 #include "nrf_lcd.h"
 void WriteOneDot(unsigned int color);//Ğ´Ò»¸öµã£¨´øÑÕÉ«£©
@@ -14,8 +16,13 @@ void WriteDispData(unsigned char DataH, unsigned char DataL);//Ğ´ÏÔÊ¾Êı¾İÏòÆÁÄ»£
 #define PIC_HEIGHT   160
 
 
+#ifdef EVAL_PIC
+	void DispPic(unsigned int  *picture);//»æÖÆÒ»¸öÍ¼Æ¬
+#endif
 
-
+#ifdef SD_DEMO_PIC
+	void DispPicFromSD(unsigned char PicNum);
+#endif
 
 
 #endif

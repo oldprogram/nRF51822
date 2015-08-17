@@ -11,7 +11,7 @@ void BlockWrite(unsigned int Xstart, unsigned int Xend, unsigned int Ystart, uns
 
 
 void DrawLine(unsigned int Xstart, unsigned int Xend, unsigned int Ystart, unsigned int Yend, unsigned int color);
-#define DrawBand(a,b,c,d,e) DrawLine((a),(b),(c),(d),(e))
+#define DrawBand(a,b,c,d,e) DrawLine((a),(b),(c),(d),(e))								  //一个宏汇编同名定义
 
 
 

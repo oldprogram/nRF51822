@@ -5,7 +5,7 @@
 #ifdef CHAR_FONT_W8_H16
 //ascii 32~90(!~Z), (32~47)空格~/,(48~57)0~9,(58~64):~@,(65~126)A~~
 //ord 0~95, (48~57)0~9,(65~126)A~z,(33~47)!~/,(58~64):~@
-unsigned char ascii[] =
+unsigned char const ascii[] =
 {
     //宋体12,点阵为：宽x高=8x16
     //0(ord:0)
@@ -305,7 +305,7 @@ unsigned char ascii[] =
 #ifdef CHAR_FONT_W16_H21
 //ascii 32~90(!~Z), (32~47)空格~/,(48~57)0~9,(58~64):~@,(65~126)A~~
 //ord 0~95, (48~57)0~9,(65~126)A~z,(33~47)!~/,(58~64):~@
-unsigned char ascii[] =
+unsigned char const ascii[] =
 {
     //宋体16,点阵为：宽x高=16x21
     /*--  文字:  0  --*/

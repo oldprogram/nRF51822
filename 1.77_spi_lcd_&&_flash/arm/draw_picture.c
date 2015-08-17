@@ -1,7 +1,7 @@
 #include "draw_picture.h"
 
 
-
+unsigned char buffer[512];
 
 ////////////////////////////////////////////////////////////////////////////////////
 //»æÖÆÍ¼Æ¬º¯Êý
@@ -94,32 +94,30 @@ void DispPicFromSD(unsigned char PicNum)
     unsigned int  i;
     unsigned long k;
 
-    SD_Start();
-
-    CLKSEL = 0x03;
+//    SD_Start();
+//
+//    CLKSEL = 0x03;
     BlockWrite(0, COL - 1, 0, ROW - 1);
 
-    CS0 = 0;
+    CS_CLEAR;
     //RD0=1;
-    RS = 1;
+    RS_SET;
 
-    k = (unsigned long)ROW * (unsigned long)COL * 2 / 512;
-    Address_S = PicNum * k + 1;   	   ;
+    k = (unsigned long)ROW * (unsigned long)COL * 2 / 256;
+//    Address_S = PicNum * k + 1;   	
+	Address_S=0;   
     Address_E = Address_S + k;
     for(; Address_S < Address_E; Address_S++)
     {
-        MMC_SD_ReadSingleBlock(Address_S);
+		SpiFlash_Read_Data(buffer, PicNum , Address_S , 256);
+//        MMC_SD_ReadSingleBlock(Address_S);
 
-
-
-        for(i = 0; i < 512; i += 2)
+        for(i = 0; i < 256; i += 2)
         {
             WriteDispData(buffer[i], buffer[i + 1]);
         }
-
     }
-
-    CS0 = 1;
-    CLKSEL = 0x00;
+    CS_SET;
+//    CLKSEL = 0x00;
 }
 #endif

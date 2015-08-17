@@ -393,6 +393,46 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>GUI</GroupName>
+          <Files>
+            <File>
+              <FileName>nrf_lcd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\nrf_lcd.c</FilePath>
+            </File>
+            <File>
+              <FileName>draw_base.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\draw_base.c</FilePath>
+            </File>
+            <File>
+              <FileName>draw_picture.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\draw_picture.c</FilePath>
+            </File>
+            <File>
+              <FileName>draw_text.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\draw_text.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>BSP</GroupName>
+          <Files>
+            <File>
+              <FileName>nrf_delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\nrf_delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\flash.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>core</GroupName>
           <Files>
             <File>
@@ -408,27 +448,17 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>lib</GroupName>
+          <GroupName>SRC</GroupName>
           <Files>
-            <File>
-              <FileName>nrf_delay.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\nrf_delay.c</FilePath>
-            </File>
-            <File>
-              <FileName>nrf_lcd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\nrf_lcd.c</FilePath>
-            </File>
             <File>
               <FileName>font.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\font.c</FilePath>
             </File>
             <File>
-              <FileName>flash.c</FileName>
+              <FileName>pic.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\flash.c</FilePath>
+              <FilePath>.\pic.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -821,6 +851,46 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>GUI</GroupName>
+          <Files>
+            <File>
+              <FileName>nrf_lcd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\nrf_lcd.c</FilePath>
+            </File>
+            <File>
+              <FileName>draw_base.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\draw_base.c</FilePath>
+            </File>
+            <File>
+              <FileName>draw_picture.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\draw_picture.c</FilePath>
+            </File>
+            <File>
+              <FileName>draw_text.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\draw_text.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>BSP</GroupName>
+          <Files>
+            <File>
+              <FileName>nrf_delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\nrf_delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\flash.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>core</GroupName>
           <Files>
             <File>
@@ -836,27 +906,17 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>lib</GroupName>
+          <GroupName>SRC</GroupName>
           <Files>
-            <File>
-              <FileName>nrf_delay.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\nrf_delay.c</FilePath>
-            </File>
-            <File>
-              <FileName>nrf_lcd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\nrf_lcd.c</FilePath>
-            </File>
             <File>
               <FileName>font.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\font.c</FilePath>
             </File>
             <File>
-              <FileName>flash.c</FileName>
+              <FileName>pic.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\flash.c</FilePath>
+              <FilePath>.\pic.c</FilePath>
             </File>
           </Files>
         </Group>

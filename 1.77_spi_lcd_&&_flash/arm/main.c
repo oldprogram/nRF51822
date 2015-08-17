@@ -8,7 +8,12 @@
 #include "draw_base.h"
 #include "draw_picture.h"
 #include "draw_text.h"
+#include "pic.h"
 
+extern unsigned  int pic_eval[];
+extern unsigned char gImage_A[];
+extern unsigned char gImage_B[];
+extern unsigned char gImage_C[];
 
 #if defined(FLASH_TEST)
 extern uint8_t FLASH_Buf[10];
@@ -67,31 +72,40 @@ int main(void)
 	LCD_Init();
 	Spi_Flash_Init();
 	DispColor(RED);
-	Spi_Flash_test();
+//	Spi_Flash_test();
 	x=y=cnt=0;
 	dis=1;
-
-
+//	SPIFlash_Erase_Block(0);
+//	SPIFlash_Erase_Block(1);
+//	SPIFlash_Erase_Block(2);
+//	nrf_delay_ms(100);
+	SpiFlash_Write_MorePage(gImage_A, 0, 40960);
+	SpiFlash_Write_MorePage(gImage_B, 1<<16, 40960);
+	SpiFlash_Write_MorePage(gImage_C, 2*(1<<16), 40960);
+//	DispPic(pic_eval);
+	DispPicFromSD(0);
+	DispPicFromSD(1);
+	DispPicFromSD(2);
    	while(1<2)
 	{
-		cnt++;
-		myDis.pre_dir=myDis.dir;
-		myDis.dir=cnt%4;
-		DispInt(cnt,COL/2-FONT_W*2,ROW,BLUE,RED);
-		FLASH_Buf[3]=0;
-		DispStr(FLASH_Buf,x,y,BLACK,RED); 
-		drawDIS(1);
-
-		x+=dis*1;
-		y+=dis*2;
-		if(x>=COL-FONT_W*6)
-		{
-			dis=-1;	
-		}
-		if(x<=0)
-		{
-		 	dis=1;
-		}  
-		nrf_delay_ms(100);
+//		cnt++;
+//		myDis.pre_dir=myDis.dir;
+//		myDis.dir=cnt%4;
+//		DispInt(cnt,COL/2-FONT_W*2,ROW,BLUE,RED);
+//		FLASH_Buf[3]=0;
+//		DispStr(FLASH_Buf,x,y,BLACK,RED); 
+//		drawDIS(1);
+//
+//		x+=dis*1;
+//		y+=dis*2;
+//		if(x>=COL-FONT_W*6)
+//		{
+//			dis=-1;	
+//		}
+//		if(x<=0)
+//		{
+//		 	dis=1;
+//		}  
+//		nrf_delay_ms(100);
 	}
 }
