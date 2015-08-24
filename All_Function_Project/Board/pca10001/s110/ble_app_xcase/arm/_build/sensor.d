@@ -1,0 +1,13 @@
+.\_build\sensor.o: ..\sensor.c
+.\_build\sensor.o: ..\sensor.h
+.\_build\sensor.o: ..\..\..\..\..\xcase\Include\nrf_gpio.h
+.\_build\sensor.o: ..\..\..\..\..\xcase\Include\nrf51.h
+.\_build\sensor.o: D:\Keil\ARM\CMSIS\Include\core_cm0.h
+.\_build\sensor.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\_build\sensor.o: D:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\_build\sensor.o: D:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+.\_build\sensor.o: ..\..\..\..\..\xcase\Include\system_nrf51.h
+.\_build\sensor.o: ..\..\..\..\..\xcase\Include\nrf51_bitfields.h
+.\_build\sensor.o: D:\Keil\ARM\CMSIS\Include\core_cm0.h
+.\_build\sensor.o: ..\..\..\..\..\xcase\Include\boards.h
+.\_build\sensor.o: ..\..\..\..\..\xcase\Include\boards/pca10001.h
