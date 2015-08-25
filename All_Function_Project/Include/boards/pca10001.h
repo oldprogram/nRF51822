@@ -35,7 +35,7 @@
 #define FLASH_POWER_EN   8//enable power if high
 #if defined(FLASH_1Gb)  
 #define SPI_FLASH_CS       9//FLASH_0_CS 
-#elif defined(FLASH_64Mb)
+#elif defined(FLASH_16Mb)
 #define SPI_FLASH_CS       12//FLASH_1_CS 
 #endif
 #define FLASH_WP         10//

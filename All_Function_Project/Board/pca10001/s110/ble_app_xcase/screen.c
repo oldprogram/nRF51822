@@ -254,20 +254,20 @@ void DrawBand(uint16_t sensor_state)
 	uint16_t xo=sensor_state^pre_sensor_state;
 
 	if((xo & 0x01)==0x01){
-		DrawRectangle(ROW-(Rect_Dis+Rect_Length),ROW-Rect_Dis,(COL-Rect_Width)/2,(COL+Rect_Width)/2,
-		((sensor_state & 0x01)==0x01) ? RED : BLUE);//right	
+		DrawRectangle(Rect_Dis,Rect_Dis+Rect_Length,(COL-Rect_Width)/2,(COL+Rect_Width)/2,
+		((sensor_state & 0x01)==0x01) ? RED : BLUE);//left
 	}
 	if((xo & 0x02)==0x02){
-		DrawRectangle((ROW-Rect_Width)/2,(ROW+Rect_Width)/2,COL-(Rect_Dis+Rect_Length),COL-Rect_Dis,
-	   ((sensor_state & 0x02)==0x02) ? RED : BLUE);//down
+		DrawRectangle((ROW-Rect_Width)/2,(ROW+Rect_Width)/2,Rect_Dis,Rect_Dis+Rect_Length,
+		((sensor_state & 0x02)==0x02) ? RED : BLUE);//up
 	}
 	if((xo & 0x04)==0x04){
-		DrawRectangle(Rect_Dis,Rect_Dis+Rect_Length,(COL-Rect_Width)/2,(COL+Rect_Width)/2,
-		((sensor_state & 0x04)==0x04) ? RED : BLUE);//left
+		DrawRectangle(ROW-(Rect_Dis+Rect_Length),ROW-Rect_Dis,(COL-Rect_Width)/2,(COL+Rect_Width)/2,
+		((sensor_state & 0x04)==0x04) ? RED : BLUE);//right	
 	}
 	if((xo & 0x08)==0x08){
-	  	DrawRectangle((ROW-Rect_Width)/2,(ROW+Rect_Width)/2,Rect_Dis,Rect_Dis+Rect_Length,
-		((sensor_state & 0x08)==0x08) ? RED : BLUE);//up
+		DrawRectangle((ROW-Rect_Width)/2,(ROW+Rect_Width)/2,COL-(Rect_Dis+Rect_Length),COL-Rect_Dis,
+	   ((sensor_state & 0x08)==0x08) ? RED : BLUE);//down
 	}
 	
 	pre_sensor_state=sensor_state;	

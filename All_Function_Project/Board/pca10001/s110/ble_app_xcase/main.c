@@ -53,8 +53,8 @@
 #define    SENSOR_Enable_POWER   nrf_gpio_pin_set(SEN_POWER_EN)     //Æ¬Ñ¡ÎÞÐ§
 #define SENSOR_BUTTON_PIN_LEFT               SEN_LEFT                                 /**< Button used to increment heart rate. */
 #define SENSOR_BUTTON_PIN_UP                 SEN_UP                                  /**< Button used to decrement heart rate. */
-#define SENSOR_BUTTON_PIN_DOWN               SEN_DOWN 
-#define SENSOR_BUTTON_PIN_RIGHT              SEN_RIGHT 
+#define SENSOR_BUTTON_PIN_DOWN               SEN_DOWN
+#define SENSOR_BUTTON_PIN_RIGHT              SEN_RIGHT
 #define SENSOR_BUTTON_PIN_INT                SEN_INT
 //#define BONDMNGR_DELETE_BUTTON_PIN_NO        BUTTON_ON_OFF                      /**< Button used for deleting all bonded centrals during startup. */
 #define BONDMNGR_DELETE_BUTTON_PIN_NO        BUTTON_ON_OFF
@@ -110,7 +110,7 @@ static volatile uint8_t                      sensor_healthy_state;
 static app_timer_id_t                        m_battery_timer_id;                       /**< Battery timer. */
 static app_timer_id_t                        m_heart_rate_timer_id;                   /**< Heart rate measurement timer. */
 
-static void ble_evt_dispatch(ble_evt_t * p_ble_evt);
+static void ble_evt_dispatch(ble_evt_t *p_ble_evt);
 
 static void sys_evt_dispatch(uint32_t sys_evt);
 
@@ -120,16 +120,16 @@ static void system_off_mode_enter(void);
 *****************************************************************************/
 
 
-/**@brief Function for error handling, which is called when an error has occurred. 
+/**@brief Function for error handling, which is called when an error has occurred.
  *
- * @warning This handler is an example only and does not fit a final product. You need to analyze 
+ * @warning This handler is an example only and does not fit a final product. You need to analyze
  *          how your product is supposed to react in case of error.
  *
  * @param[in] error_code  Error code supplied to the handler.
  * @param[in] line_num    Line number where the handler is called.
- * @param[in] p_file_name Pointer to the file name. 
+ * @param[in] p_file_name Pointer to the file name.
  */
-void app_error_handler(uint32_t error_code, uint32_t line_num, const uint8_t * p_file_name)
+void app_error_handler(uint32_t error_code, uint32_t line_num, const uint8_t *p_file_name)
 {
     // This call can be used for debug purposes during application development.
     // @note CAUTION: Activating this code will write the stack to flash on an error.
@@ -149,14 +149,14 @@ void app_error_handler(uint32_t error_code, uint32_t line_num, const uint8_t * p
  *
  * @details This function will be called in case of an assert in the SoftDevice.
  *
- * @warning This handler is an example only and does not fit a final product. You need to analyze 
+ * @warning This handler is an example only and does not fit a final product. You need to analyze
  *          how your product is supposed to react in case of Assert.
  * @warning On assert from the SoftDevice, the system can only recover on reset.
  *
  * @param[in]   line_num   Line number of the failing ASSERT call.
  * @param[in]   file_name  File name of the failing ASSERT call.
  */
-void assert_nrf_callback(uint16_t line_num, const uint8_t * p_file_name)
+void assert_nrf_callback(uint16_t line_num, const uint8_t *p_file_name)
 {
     app_error_handler(DEAD_BEEF, line_num, p_file_name);
 }
@@ -194,7 +194,7 @@ static void bond_manager_error_handler(uint32_t nrf_error)
  * @param[in]   p_context   Pointer used for passing some arbitrary information (context) from the
  *                          app_start_timer() call to the timeout handler.
  */
-static void battery_level_meas_timeout_handler(void * p_context)
+static void battery_level_meas_timeout_handler(void *p_context)
 {
     UNUSED_PARAMETER(p_context);
     battery_start();
@@ -209,10 +209,10 @@ static void battery_level_meas_timeout_handler(void * p_context)
  * @param[in]   p_context   Pointer used for passing some arbitrary information (context) from the
  *                          app_start_timer() call to the timeout handler.
  */
-static void heart_rate_meas_timeout_handler(void * p_context)
+static void heart_rate_meas_timeout_handler(void *p_context)
 {
-	;
-	#if 0
+    ;
+#if 0
     uint32_t err_code;
 
     UNUSED_PARAMETER(p_context);
@@ -231,7 +231,7 @@ static void heart_rate_meas_timeout_handler(void * p_context)
     {
         APP_ERROR_HANDLER(err_code);
     }
-		#endif
+#endif
 }
 
 static void sensor_state_chg_handler(void )
@@ -282,33 +282,33 @@ void bt_write_loopback(uint16_t data)//at most 2 bytes
  * @param[in]   p_hrs   Idenitifies service instance.
  * @param[in]   p_evt   Identifies HRS event.
  */
-static void hrs_event_handler(ble_hrs_t * p_hrs, ble_hrs_evt_t * p_evt)
+static void hrs_event_handler(ble_hrs_t *p_hrs, ble_hrs_evt_t *p_evt)
 {
     uint32_t err_code;
-    
+
     switch(p_evt->evt_type)
     {
-        case BLE_HRS_EVT_NOTIFICATION_ENABLED:     // Fall through
-        case BLE_HRS_EVT_NOTIFICATION_DISABLED:
-            
-            // Try to store system attributes
-            err_code = ble_bondmngr_sys_attr_store();
-            if (err_code == NRF_SUCCESS)
-            {
-                // System attribute store successfully requested.
-            }
-            else if (err_code == NRF_ERROR_INVALID_STATE)
-            {
-                // System attributes already updated, cannot update again.
-            }
-            else
-            {
-                APP_ERROR_HANDLER(err_code);
-            }
-                
-            break;
-        default:            
-            break;
+    case BLE_HRS_EVT_NOTIFICATION_ENABLED:     // Fall through
+    case BLE_HRS_EVT_NOTIFICATION_DISABLED:
+
+        // Try to store system attributes
+        err_code = ble_bondmngr_sys_attr_store();
+        if (err_code == NRF_SUCCESS)
+        {
+            // System attribute store successfully requested.
+        }
+        else if (err_code == NRF_ERROR_INVALID_STATE)
+        {
+            // System attributes already updated, cannot update again.
+        }
+        else
+        {
+            APP_ERROR_HANDLER(err_code);
+        }
+
+        break;
+    default:
+        break;
     }
 }
 
@@ -319,52 +319,42 @@ static void hrs_event_handler(ble_hrs_t * p_hrs, ble_hrs_evt_t * p_evt)
  */
 static void button_event_handler(uint8_t pin_no)
 {
-		static uint8_t ok=0;
-		uint32_t state_l=1, state_r=1, state_up=1, state_down=1; //
-		uint16_t sensor_state = 0,sensor_tmp = 0;
-		state_l = nrf_gpio_pin_read(SEN_LEFT);
-	
-	  state_r = nrf_gpio_pin_read(SEN_RIGHT);
-	  state_up = nrf_gpio_pin_read(SEN_UP);
-	  state_down   = nrf_gpio_pin_read(SEN_DOWN);
-	  //nrf_gpio_pin_set(IND_LED);// any interrupt toggle LED
-    sensor_tmp = (uint16_t)~(state_up|(state_r<<1)|(state_down<<2)|(state_l<<3));
-	  sensor_state = 0x000F&sensor_tmp;
-	  //nrf_gpio_pin_toggle(IND_LED);// any interrupt toggle LED
-	  #if defined(LOCAL_TEST)
-	  //edge_dispband(sensor_state);
-	  #endif
-	switch (pin_no)
-    {
-				case SENSOR_BUTTON_PIN_LEFT :
-				case SENSOR_BUTTON_PIN_RIGHT:
-				case SENSOR_BUTTON_PIN_DOWN:
-				case SENSOR_BUTTON_PIN_UP:
-					  //nrf_gpio_pin_toggle(IND_LED);// any interrupt toggle LED
-				    //nrf_gpio_pin_toggle(IND_LED);// any interrupt toggle LED
-//					if(ok==0){
-//						DrawRectangle(10,30,110,130,RED);
-//						ok=1;
-//					}else{
-//						DrawRectangle(10,30,110,130,GREEN);
-//					  	ok=0;
-//					}
-DrawBand( sensor_state);
-	          m_cur_heart_rate = sensor_state;
-				    sensor_state_chg_handler();
-				break;
-				#if 0
-				case BONDMNGR_DELETE_BUTTON_PIN_NO://system off
-					nrf_gpio_cfg_sense_input(BONDMNGR_DELETE_BUTTON_PIN_NO,
-                                         BUTTON_PULL, 
-                                         NRF_GPIO_PIN_SENSE_LOW);
+    uint32_t state_l = 1, state_r = 1, state_up = 1, state_down = 1; //
+    uint16_t sensor_state = 0, sensor_tmp = 0;
+    state_l = nrf_gpio_pin_read(SEN_LEFT);
 
-          system_off_mode_enter();
-					break;
-				#endif
-				default:
-            APP_ERROR_HANDLER(pin_no);
-            break;
+    state_r = nrf_gpio_pin_read(SEN_RIGHT);
+    state_up = nrf_gpio_pin_read(SEN_UP);
+    state_down   = nrf_gpio_pin_read(SEN_DOWN);
+    //nrf_gpio_pin_set(IND_LED);// any interrupt toggle LED
+    sensor_tmp = (uint16_t)~(state_up | (state_r << 1) | (state_down << 2) | (state_l << 3));
+    sensor_state = 0x000F & sensor_tmp;
+    //nrf_gpio_pin_toggle(IND_LED);// any interrupt toggle LED
+#if defined(LOCAL_TEST)
+    //edge_dispband(sensor_state);
+#endif
+    switch (pin_no)
+    {
+    case SENSOR_BUTTON_PIN_LEFT :
+    case SENSOR_BUTTON_PIN_RIGHT:
+    case SENSOR_BUTTON_PIN_DOWN:
+    case SENSOR_BUTTON_PIN_UP:
+        DrawBand( sensor_state);
+        m_cur_heart_rate = sensor_state;
+        sensor_state_chg_handler();
+        break;
+#if 0
+    case BONDMNGR_DELETE_BUTTON_PIN_NO://system off
+        nrf_gpio_cfg_sense_input(BONDMNGR_DELETE_BUTTON_PIN_NO,
+                                 BUTTON_PULL,
+                                 NRF_GPIO_PIN_SENSE_LOW);
+
+        system_off_mode_enter();
+        break;
+#endif
+    default:
+        APP_ERROR_HANDLER(pin_no);
+        break;
     }
 }
 
@@ -461,7 +451,7 @@ static void advertising_init(void)
 
     // Initialize advertising parameters (used when starting advertising)
     memset(&m_adv_params, 0, sizeof(m_adv_params));
-    
+
     m_adv_params.type        = BLE_GAP_ADV_TYPE_ADV_IND;
     m_adv_params.p_peer_addr = NULL;                           // Undirected advertisement
     m_adv_params.fp          = BLE_GAP_ADV_FP_ANY;
@@ -498,10 +488,10 @@ static void services_init(void)
 
     BLE_GAP_CONN_SEC_MODE_SET_OPEN(&hrs_init.hrs_bsl_attr_md.read_perm);
     BLE_GAP_CONN_SEC_MODE_SET_NO_ACCESS(&hrs_init.hrs_bsl_attr_md.write_perm);
-		//BLE_GAP_CONN_SEC_MODE_SET_OPEN(&hrs_init.hrs_bsl_attr_md.write_perm);
+    //BLE_GAP_CONN_SEC_MODE_SET_OPEN(&hrs_init.hrs_bsl_attr_md.write_perm);
     //BLE_GAP_CONN_SEC_MODE_SET_NO_ACCESS(&hrs_init.hrs_bsl_attr_md.read_perm);
-		
-		// Here the sec level for the Heart Rate Service can be changed/increased.
+
+    // Here the sec level for the Heart Rate Service can be changed/increased.
     BLE_GAP_CONN_SEC_MODE_SET_NO_ACCESS(&hrs_init.hrs_rcv_attr_md.read_perm);
     BLE_GAP_CONN_SEC_MODE_SET_OPEN(&hrs_init.hrs_rcv_attr_md.write_perm);
 
@@ -547,7 +537,7 @@ static void sec_params_init(void)
     m_sec_params.bond         = SEC_PARAM_BOND;
     m_sec_params.mitm         = SEC_PARAM_MITM;
     m_sec_params.io_caps      = SEC_PARAM_IO_CAPABILITIES;
-    m_sec_params.oob          = SEC_PARAM_OOB;  
+    m_sec_params.oob          = SEC_PARAM_OOB;
     m_sec_params.min_key_size = SEC_PARAM_MIN_KEY_SIZE;
     m_sec_params.max_key_size = SEC_PARAM_MAX_KEY_SIZE;
 }
@@ -587,7 +577,7 @@ static void bond_manager_init(void)
     // Initialize persistent storage module.
     err_code = pstorage_init();
     APP_ERROR_CHECK(err_code);
-    
+
     // Clear all bonded centrals if the Bonds Delete button is pushed
     err_code = app_button_is_pushed(BONDMNGR_DELETE_BUTTON_PIN_NO, &bonds_delete);
     APP_ERROR_CHECK(err_code);
@@ -611,14 +601,14 @@ static void bond_manager_init(void)
 static void ble_stack_init(void)
 {
     uint32_t err_code;
-    
+
     // Initialize the SoftDevice handler module.
     SOFTDEVICE_HANDLER_INIT(NRF_CLOCK_LFCLKSRC_XTAL_20_PPM, false);
 
     // Register with the SoftDevice handler module for BLE events.
     err_code = softdevice_ble_evt_handler_set(ble_evt_dispatch);
     APP_ERROR_CHECK(err_code);
-    
+
     // Register with the SoftDevice handler module for BLE events.
     err_code = softdevice_sys_evt_handler_set(sys_evt_dispatch);
     APP_ERROR_CHECK(err_code);
@@ -643,23 +633,23 @@ static void buttons_init(void)
     {
         {SENSOR_BUTTON_PIN_RIGHT, false, BUTTON_PULL, button_event_handler},
         {SENSOR_BUTTON_PIN_LEFT, false, BUTTON_PULL, button_event_handler},
-				{SENSOR_BUTTON_PIN_UP, false, BUTTON_PULL, button_event_handler},
-        {SENSOR_BUTTON_PIN_DOWN, false, BUTTON_PULL, button_event_handler}    
+        {SENSOR_BUTTON_PIN_UP, false, BUTTON_PULL, button_event_handler},
+        {SENSOR_BUTTON_PIN_DOWN, false, BUTTON_PULL, button_event_handler}
     };
-		static app_button_cfg_t button[] =
+    static app_button_cfg_t button[] =
     {
         {BONDMNGR_DELETE_BUTTON_PIN_NO, false, BUTTON_PULL, button_event_handler}
-		};
-		nrf_gpio_cfg_input(SEN_INT,NRF_GPIO_PIN_NOPULL);
-		nrf_gpio_cfg_input(BONDMNGR_DELETE_BUTTON_PIN_NO,NRF_GPIO_PIN_NOPULL);
+    };
+    nrf_gpio_cfg_input(SEN_INT, NRF_GPIO_PIN_NOPULL);
+    nrf_gpio_cfg_input(BONDMNGR_DELETE_BUTTON_PIN_NO, NRF_GPIO_PIN_NOPULL);
     //nrf_gpio_cfg_output(SEN_INT);
-		//nrf_gpio_pin_clear(SEN_INT);// disable the int pin
-		//nrf_gpio_cfg_output(BONDMNGR_DELETE_BUTTON_PIN_NO);
-		//nrf_gpio_pin_set(BONDMNGR_DELETE_BUTTON_PIN_NO);// disable the on_off pin
-		nrf_gpio_cfg_output(SEN_POWER_EN);
-		SENSOR_Enable_POWER;//enable after phone sends ON cmd
+    //nrf_gpio_pin_clear(SEN_INT);// disable the int pin
+    //nrf_gpio_cfg_output(BONDMNGR_DELETE_BUTTON_PIN_NO);
+    //nrf_gpio_pin_set(BONDMNGR_DELETE_BUTTON_PIN_NO);// disable the on_off pin
+    nrf_gpio_cfg_output(SEN_POWER_EN);
+    SENSOR_Enable_POWER;//enable after phone sends ON cmd
     APP_BUTTON_INIT(sensors, sizeof(sensors) / sizeof(sensors[0]), SENSOR_DETECTION_DELAY, false);
-		//APP_BUTTON_INIT(button, sizeof(button) / sizeof(button[0]), BUTTON_DETECTION_DELAY, false);
+    //APP_BUTTON_INIT(button, sizeof(button) / sizeof(button[0]), BUTTON_DETECTION_DELAY, false);
 }
 
 
@@ -693,18 +683,19 @@ static void advertising_start(void)
 
     led_start();
 }
- 
+
 
 /**@brief Function for putting the chip in System OFF Mode
  */
 static void system_off_mode_enter(void)
 {
     uint32_t err_code;
-	  nrf_gpio_pin_set(IND_LED);
-	  //SENSOR_Disable_POWER;//disable sensor power
-	  //SPIFlash_Disable_POWER;//disable flash power
-	  //disable screen power and blacklight
-    
+    nrf_gpio_pin_set(IND_LED);
+    //SENSOR_Disable_POWER;//disable sensor power
+    SPIFlash_Disable_POWER;//disable flash power
+    //disable screen power and blacklight
+    LCD_Disable_POWER;
+    LCD_BCKLIGHT_Disable_POWER;
     err_code = sd_power_system_off();
     APP_ERROR_CHECK(err_code);
 }
@@ -718,78 +709,78 @@ static void system_off_mode_enter(void)
  *
  * @param[in]   p_ble_evt   Bluetooth stack event.
  */
-static void on_ble_evt(ble_evt_t * p_ble_evt)
+static void on_ble_evt(ble_evt_t *p_ble_evt)
 {
     uint32_t        err_code;
     static uint16_t m_conn_handle = BLE_CONN_HANDLE_INVALID;
 
     switch (p_ble_evt->header.evt_id)
     {
-        case BLE_GAP_EVT_CONNECTED:
+    case BLE_GAP_EVT_CONNECTED:
+        led_stop();
+
+        m_conn_handle = p_ble_evt->evt.gap_evt.conn_handle;
+
+        // Initialize the current heart rate to the average of max and min values. So that
+        // everytime a new connection is made, the heart rate starts from the same value.
+        m_cur_heart_rate = 0;//(MAX_HEART_RATE + MIN_HEART_RATE) / 2;
+
+        // Start timers used to generate battery and HR measurements.
+        application_timers_start();
+
+        // Start handling button presses
+        err_code = app_button_enable();
+        APP_ERROR_CHECK(err_code);
+        break;
+
+    case BLE_GAP_EVT_DISCONNECTED:
+        // Since we are not in a connection and have not started advertising, store bonds
+        err_code = ble_bondmngr_bonded_centrals_store();
+        APP_ERROR_CHECK(err_code);
+
+        // @note Flash access may not be complete on return of this API. System attributes are now
+        // stored to flash when they are updated to ensure flash access on disconnect does not
+        // result in system powering off before data was successfully written.
+
+        // Go to system-off mode, should not return from this function, wakeup will trigger
+        // a reset.
+        system_off_mode_enter();
+        break;
+
+    case BLE_GAP_EVT_SEC_PARAMS_REQUEST:
+        err_code = sd_ble_gap_sec_params_reply(m_conn_handle,
+                                               BLE_GAP_SEC_STATUS_SUCCESS,
+                                               &m_sec_params);
+        APP_ERROR_CHECK(err_code);
+        break;
+
+    case BLE_GAP_EVT_TIMEOUT:
+        if (p_ble_evt->evt.gap_evt.params.timeout.src == BLE_GAP_TIMEOUT_SRC_ADVERTISEMENT)
+        {
             led_stop();
-            
-            m_conn_handle = p_ble_evt->evt.gap_evt.conn_handle;
-            
-            // Initialize the current heart rate to the average of max and min values. So that
-            // everytime a new connection is made, the heart rate starts from the same value.
-            m_cur_heart_rate = 0;//(MAX_HEART_RATE + MIN_HEART_RATE) / 2;
 
-            // Start timers used to generate battery and HR measurements.
-            application_timers_start();
+            nrf_gpio_cfg_sense_input(SENSOR_BUTTON_PIN_RIGHT,
+                                     BUTTON_PULL,
+                                     NRF_GPIO_PIN_SENSE_LOW);
 
-            // Start handling button presses
-            err_code = app_button_enable();
-            APP_ERROR_CHECK(err_code);
-            break;
+            nrf_gpio_cfg_sense_input(SENSOR_BUTTON_PIN_LEFT,
+                                     BUTTON_PULL,
+                                     NRF_GPIO_PIN_SENSE_LOW);
+            nrf_gpio_cfg_sense_input(SENSOR_BUTTON_PIN_UP,
+                                     BUTTON_PULL,
+                                     NRF_GPIO_PIN_SENSE_LOW);
 
-        case BLE_GAP_EVT_DISCONNECTED:
-            // Since we are not in a connection and have not started advertising, store bonds
-            err_code = ble_bondmngr_bonded_centrals_store();
-            APP_ERROR_CHECK(err_code);
-        
-            // @note Flash access may not be complete on return of this API. System attributes are now
-            // stored to flash when they are updated to ensure flash access on disconnect does not
-            // result in system powering off before data was successfully written.
+            nrf_gpio_cfg_sense_input(SENSOR_BUTTON_PIN_DOWN,
+                                     BUTTON_PULL,
+                                     NRF_GPIO_PIN_SENSE_LOW);
 
-            // Go to system-off mode, should not return from this function, wakeup will trigger
-            // a reset.
             system_off_mode_enter();
-            break;
+        }
+        break;
 
-        case BLE_GAP_EVT_SEC_PARAMS_REQUEST:
-            err_code = sd_ble_gap_sec_params_reply(m_conn_handle, 
-                                                   BLE_GAP_SEC_STATUS_SUCCESS, 
-                                                   &m_sec_params);
-            APP_ERROR_CHECK(err_code);
-            break;
-
-        case BLE_GAP_EVT_TIMEOUT:
-            if (p_ble_evt->evt.gap_evt.params.timeout.src == BLE_GAP_TIMEOUT_SRC_ADVERTISEMENT)
-            {
-                led_stop();
-                
-                nrf_gpio_cfg_sense_input(SENSOR_BUTTON_PIN_RIGHT,
-                                         BUTTON_PULL, 
-                                         NRF_GPIO_PIN_SENSE_LOW);
-
-                nrf_gpio_cfg_sense_input(SENSOR_BUTTON_PIN_LEFT,
-                                         BUTTON_PULL, 
-                                         NRF_GPIO_PIN_SENSE_LOW);
-							  nrf_gpio_cfg_sense_input(SENSOR_BUTTON_PIN_UP,
-                                         BUTTON_PULL, 
-                                         NRF_GPIO_PIN_SENSE_LOW);
-
-                nrf_gpio_cfg_sense_input(SENSOR_BUTTON_PIN_DOWN,
-                                         BUTTON_PULL, 
-                                         NRF_GPIO_PIN_SENSE_LOW);
-
-                system_off_mode_enter();
-            }
-            break;
-
-        default:
-            // No implementation needed.
-            break;
+    default:
+        // No implementation needed.
+        break;
     }
 }
 
@@ -801,7 +792,7 @@ static void on_ble_evt(ble_evt_t * p_ble_evt)
  *
  * @param[in]   p_ble_evt   Bluetooth stack event.
  */
-static void ble_evt_dispatch(ble_evt_t * p_ble_evt)
+static void ble_evt_dispatch(ble_evt_t *p_ble_evt)
 {
     ble_bondmngr_on_ble_evt(p_ble_evt);
     ble_hrs_on_ble_evt(&m_hrs, p_ble_evt);
@@ -826,9 +817,9 @@ static void sys_evt_dispatch(uint32_t sys_evt)
 static void idle_pin_config(void)
 {
     nrf_gpio_cfg_output(S_IO_0);
-	  nrf_gpio_pin_clear(S_IO_0);
-	  nrf_gpio_cfg_output(S_IO_1);
-	  nrf_gpio_pin_clear(S_IO_1);
+    nrf_gpio_pin_clear(S_IO_0);
+    nrf_gpio_cfg_output(S_IO_1);
+    nrf_gpio_pin_clear(S_IO_1);
 }
 /*****************************************************************************
 * Main Function
@@ -838,33 +829,33 @@ static void idle_pin_config(void)
  */
 int main(void)
 {
-	#if 0
-	 led_init();
-	for(;;)
-	{
-	 nrf_gpio_pin_set(IND_LED);
-	 nrf_delay_ms(10);
-	 nrf_gpio_pin_clear(IND_LED);
-	 nrf_delay_ms(100);
-	}
-	#endif
-	#if 1
+#if 0
+    led_init();
+    for(;;)
+    {
+        nrf_gpio_pin_set(IND_LED);
+        nrf_delay_ms(10);
+        nrf_gpio_pin_clear(IND_LED);
+        nrf_delay_ms(100);
+    }
+#endif
+#if 1
     uint32_t err_code;
-	  //nrf_delay_ms(1000);
+    //nrf_delay_ms(1000);
 
-	  	  LCD_Init();
+    LCD_Init();
 
-	  idle_pin_config();
-	  
+    idle_pin_config();
+
     timers_init();
     gpiote_init();
-	  led_init();
+    led_init();
     buttons_init();
-//	  LCD_Init(); //
-	  Spi_Flash_Init();
-	  //Screen_show();
-	  sensor_healthy_state = 4;//check if sensors are healthy 
-	  //sensor_init();
+    //	  LCD_Init(); //
+    Spi_Flash_Init();
+    //Screen_show();
+    sensor_healthy_state = 4;//check if sensors are healthy
+    //sensor_init();
     ble_stack_init();
     bond_manager_init();
 
@@ -874,23 +865,25 @@ int main(void)
     services_init();
     conn_params_init();
     sec_params_init();
-   
+
 #if 0//defined(FLASH_TEST)
-	  Spi_Flash_test();
+    Spi_Flash_test();
 #endif
-    // Start advertising 
-//	DispColor(RED);
+    // Start advertising
+    //	DispColor(RED);
     advertising_start();
     // Enter main loop
+
+	Spi_Flash_test();
 
     for (;;)
     {
         // Switch to a low power state until an event is available for the application
-			  //Screen_show();
+        //Screen_show();
         err_code = sd_app_evt_wait();
         APP_ERROR_CHECK(err_code);
     }
-		#endif 
+#endif
 }
 
 /**

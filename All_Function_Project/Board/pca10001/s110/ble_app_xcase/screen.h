@@ -5,7 +5,6 @@
 #include "boards.h"
 #include "nrf_gpio.h"
 #include "nrf_delay.h"
-#include "font.h"
 #include "nrf_pwm.h"
 /*
 引脚高低电平宏定义
